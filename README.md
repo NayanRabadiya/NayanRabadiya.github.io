@@ -4,7 +4,7 @@ Personal site — single static page, no build step.
 
 ```
 index.html   the whole page (content lives here)
-site.css     styling (light + dark, responsive)
+site.css     styling (light theme, responsive)
 assets/      CV PDF, portrait
 ```
 
