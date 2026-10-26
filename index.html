@@ -1,211 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[Your Name] — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nayan Rabadiya</title>
+<meta name="description" content="Nayan Rabadiya — M.Tech Computer Science &amp; Engineering, IIT Delhi (department rank 1). Thesis on atrial fibrillation detection from PPG signals in wearable devices. Systems, high-performance computing and applied machine learning." />
+<link rel="canonical" href="https://nayanrabadiya.github.io/" />
+
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Nayan Rabadiya" />
+<meta property="og:description" content="Systems, HPC and applied ML. M.Tech Computer Science &amp; Engineering, IIT Delhi." />
+<meta property="og:url" content="https://nayanrabadiya.github.io/" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231F4E5F'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='600' text-anchor='middle' fill='%23FBFAF7'>N</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
 </head>
 <body>
 
-  <!-- ─── NAVBAR ─── -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">[Your Name]</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+<!-- ============ masthead ============ -->
+<header class="masthead wrap" id="top">
+  <div class="masthead-top">
+    <div>
+      <h1>Nayan Rabadiya</h1>
+      <p class="descriptor">Systems<span class="sep">&middot;</span>High-Performance Computing<span class="sep">&middot;</span>Applied ML</p>
+      <p class="affil">M.TECH COMPUTER SCIENCE &amp; ENGINEERING &middot; IIT DELHI &middot; NEW DELHI</p>
     </div>
-  </header>
+    <!-- TODO: drop a square photo at assets/portrait.jpg, then uncomment this block.
+    <figure class="portrait">
+      <img src="assets/portrait.jpg" width="440" height="440" alt="Nayan Rabadiya" />
+    </figure>
+    -->
+  </div>
 
-  <!-- ─── HERO / ABOUT ─── -->
-  <section id="hero" class="section hero">
-    <div class="container hero-content">
-      <p class="hero-eyebrow">Hi, I'm</p>
-      <h1 class="hero-name">[Your Name]</h1>
-      <p class="hero-title">[Your Title — e.g. Machine Learning Engineer &amp; Developer]</p>
-      <p class="hero-bio">
-        [A short 2–3 sentence bio about yourself. What you do, what you're passionate about,
-        and what you're currently working on or looking for.]
+  <p class="lede">
+    I build things close to the machine and measure them honestly &mdash; query engines under a
+    hard memory budget, vectorised and GPU kernels, language runtimes, and machine learning on
+    physiological signals that has to survive real-world noise.
+  </p>
+
+  <div class="intro">
+    <p>
+      My M.Tech thesis at IIT Delhi detects atrial fibrillation from photoplethysmography (PPG)
+      recorded by smartwatches and armbands, aiming at a low false-alarm rate so continuous
+      rhythm monitoring stays usable outside the clinic. Alongside it I work on systems
+      performance &mdash; SIMD and CUDA acceleration, MPI-distributed search, out-of-core query
+      execution &mdash; and I am currently ranked first in the department.
+    </p>
+  </div>
+
+  <div class="currently">
+    <p class="k">Currently</p>
+    <p>
+      Training and evaluating PPG-only AF classifiers on beat-level labels transferred from
+      synchronised ECG, across the AIIMS and VitalDB cohorts.
+      <span class="when">October 2026</span>
+    </p>
+  </div>
+
+  <nav class="utility" aria-label="Sections">
+    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#technical">Technical</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/Nayan_Rabadiya_CV.pdf">CV (PDF)</a>
+  </nav>
+</header>
+
+<!-- ============ sticky bar ============ -->
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <a class="tb-name" href="#top">Nayan Rabadiya</a>
+    <nav class="tb-nav" aria-label="Page sections">
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#technical">Technical</a>
+      <a href="#contact">Contact</a>
+      <a class="cv" href="assets/Nayan_Rabadiya_CV.pdf">CV &darr;</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ============ 01 research ============ -->
+<section class="sec-research" id="research">
+  <div class="wrap">
+    <div class="grid sec-head">
+      <h2><span class="num">01</span>Research</h2>
+      <div class="hr"></div>
+    </div>
+
+    <article class="entry grid">
+      <div class="rail">
+        <p class="when">2026 &mdash; PRESENT</p>
+        <p class="where">M.Tech thesis<br />IIT Delhi</p>
+        <p class="sup">Supervised by<br />Prof. Rahul Garg</p>
+        <p class="stack">Python · NumPy<br />SciPy · scikit-learn<br />Pandas · Plotly</p>
+      </div>
+      <div class="col">
+        <h3>Atrial fibrillation detection from PPG</h3>
+        <p class="role">Wearable-compatible cardiac screening without ECG dependency</p>
+        <div class="body">
+          <p>
+            Atrial fibrillation is the most common sustained arrhythmia and is frequently
+            asymptomatic, so it is often found only after a stroke. Smartwatches and armbands
+            already record photoplethysmography continuously &mdash; the open question is whether
+            that signal alone supports reliable rhythm classification once motion artefact,
+            poor perfusion and sensor contact loss are allowed in.
+          </p>
+          <p>
+            The work builds machine learning models for AF detection on PPG, trained against
+            beat-level labels transferred from simultaneously recorded ECG. Getting that transfer
+            right required a synchronisation stage of its own: a sync-point clock-correction
+            algorithm that removes device offset and gradual drift, and an offset scan with
+            beat-by-beat pulse pairing that recovers the optimal temporal shift. The target is a
+            low false-positive rate, since alarm fatigue is what makes continuous monitoring fail
+            in practice.
+          </p>
+          <div class="spec">
+            <div><p class="n">2</p><p class="l">cohorts &mdash; AIIMS<br />and VitalDB</p></div>
+            <div><p class="n">2</p><p class="l">signal modalities<br />ECG and PPG</p></div>
+            <div><p class="n">ms</p><p class="l">alignment held at<br />beat resolution</p></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 02 experience ============ -->
+<section class="sec wrap" id="experience">
+  <div class="grid sec-head">
+    <h2><span class="num">02</span>Experience</h2>
+    <div class="hr"></div>
+  </div>
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">JAN &mdash; APR 2025</p>
+      <p class="where">Ahmedabad</p>
+      <p class="stack">FastAPI · MongoDB<br />React · Python</p>
+      <!-- TODO: public repo link, if you want one:
+      <a class="src" href="https://github.com/NayanRabadiya/...">Source &#8599;</a> -->
+    </div>
+    <div class="col">
+      <h3>Grownited Pvt. Ltd.</h3>
+      <p class="role">Software Engineering Intern &mdash; Personal Expense Tracker</p>
+      <ul class="points">
+        <li>Built a REST backend in <strong>FastAPI</strong> over MongoDB, serving a React single-page application with role-based access control for user and admin roles.</li>
+        <li>Shipped category-wise expense tracking, budgets with overspending indicators, and interactive analytics dashboards.</li>
+        <li>Added PDF report export and an admin panel for user management.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">2025 &mdash; 2026</p>
+      <p class="where">IIT Delhi</p>
+    </div>
+    <div class="col">
+      <h3>Teaching assistantship</h3>
+      <p class="role">Department of Computer Science &amp; Engineering, IIT Delhi</p>
+      <ul class="points">
+        <li><strong>Data Structures &amp; Algorithms</strong> &mdash; lab sessions.</li>
+        <li><strong>Analysis &amp; Design of Algorithms</strong> &mdash; doubt-solving sessions.</li>
+        <li><strong>Theory of Computation</strong> &mdash; tutorial sessions.</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- ============ 03 projects ============ -->
+<section class="sec wrap" id="projects">
+  <div class="grid sec-head">
+    <h2><span class="num">03</span>Projects</h2>
+    <div class="hr"></div>
+  </div>
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">JAN &mdash; APR 2026</p>
+      <p class="where">IIT Delhi<br />Prof. Kaustubh Beedkar</p>
+      <p class="stack">C++ · TPC-H</p>
+      <!-- TODO: repo link -->
+    </div>
+    <div class="col">
+      <h3>Memory-bounded TPC-H query engine</h3>
+      <ul class="points">
+        <li>Query execution engine running multi-gigabyte TPC-H workloads under a strict <strong>64&nbsp;MB</strong> memory budget.</li>
+        <li>Volcano-model iterator pipeline with external merge sort and an LRU buffer pool.</li>
+        <li>Cost-based join selection, with a memory-aware fallback to disk-based joins.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">2025 &mdash; 2026</p>
+      <p class="where">IIT Delhi<br />Prof. Kolin Paul</p>
+      <p class="stack">C · C++ · Flex<br />Bison · ptrace · Linux</p>
+      <!-- TODO: repo link -->
+    </div>
+    <div class="col">
+      <h3>Custom language runtime</h3>
+      <p class="role">Shell, compiler, virtual machine, debugger and garbage collector</p>
+      <ul class="points">
+        <li>Mini-shell with command pipelines, background processes and job control.</li>
+        <li><code>ptrace</code>-based debugger with software breakpoints and register inspection.</li>
+        <li>Flex/Bison compiler targeting a stack-based virtual machine, with its own assembler and a <strong>garbage collector</strong>.</li>
+        <li>All five components integrated behind one shell &mdash; compile, run and debug in a single session.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">AUG &mdash; NOV 2025</p>
+      <p class="where">IIT Delhi<br />Prof. Kolin Paul</p>
+      <p class="stack">C · AVX-512<br />OpenMP</p>
+      <!-- TODO: repo link -->
+    </div>
+    <div class="col">
+      <h3>GEMM and Smith&ndash;Waterman acceleration</h3>
+      <ul class="points">
+        <li>Dense matrix multiplication tuned with AVX-512 vectorisation, cache blocking, loop unrolling and memory alignment &mdash; <strong>44.31 GFLOP/s</strong> and a <strong>2.18&times;</strong> speedup over the NumPy baseline, from 1K&times;1K to 12K&times;12K.</li>
+        <li>Smith&ndash;Waterman alignment parallelised by anti-diagonal wavefront with AVX-512 and OpenMP &mdash; <strong>23&times;</strong> over the C baseline.</li>
+        <li>Both measured on a 4-core CPU against single-threaded references.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">JAN &mdash; APR 2026</p>
+      <p class="where">IIT Delhi<br />Prof. Subodh Sharma</p>
+      <p class="stack">CUDA · C++</p>
+      <!-- TODO: repo link -->
+    </div>
+    <div class="col">
+      <h3>GPU local histogram equalisation</h3>
+      <ul class="points">
+        <li>CUDA kernels for local histogram equalisation, with KNN and K-Means neighbourhood search traded off for speed against accuracy.</li>
+        <li>On NVIDIA Kepler (sm_35) against a sequential baseline: <strong>16.87&times;</strong> with K-Means, <strong>11.44&times;</strong> with KNN.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">JAN &mdash; APR 2026</p>
+      <p class="where">IIT Delhi<br />Prof. Subodh Sharma</p>
+      <p class="stack">MPI · C++</p>
+      <!-- TODO: repo link -->
+    </div>
+    <div class="col">
+      <h3>Distributed budgeted maximum-weight clique</h3>
+      <ul class="points">
+        <li>Branch-and-bound solver distributed across MPI ranks, with non-blocking bound sharing to prune redundant branches as they appear.</li>
+        <li>Graph colouring for upper-bound pruning and fractional knapsack for budget feasibility.</li>
+        <li><strong>6.87&times;</strong> speedup at 12 processes.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">2026</p>
+      <p class="where">IIT Delhi<br />Prof. Kolin Paul</p>
+      <p class="stack">Python · Vosk<br />AI4Bharat · MMS-TTS</p>
+      <!-- TODO: repo link -->
+    </div>
+    <div class="col">
+      <h3>Offline Hindi&ndash;Gujarati speech translation</h3>
+      <ul class="points">
+        <li>Fully offline speech-to-speech pipeline: Vosk for ASR, AI4Bharat for translation and Meta MMS-TTS for synthesis, stitched together multi-threaded.</li>
+        <li>End-to-end latency around <strong>800&nbsp;ms on CPU</strong> and <strong>450&nbsp;ms on GPU</strong> for medium-length sentences.</li>
+        <li>About <strong>97%</strong> accuracy on the tested sentence set.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">JAN &mdash; APR 2026</p>
+      <p class="where">IIT Delhi<br />Prof. Huzur Saran</p>
+      <p class="stack">C · Arduino</p>
+      <!-- TODO: repo link -->
+    </div>
+    <div class="col">
+      <h3>DNA-based lightweight cipher for IoT</h3>
+      <ul class="points">
+        <li>Implemented and benchmarked a DNA-based lightweight block cipher against established lightweight designs.</li>
+        <li>Extended it with a 4-round structure, additive modular substitution and a row-diffusion cascade &mdash; avalanche effect from <strong>1.56% to 35.0%</strong>, key sensitivity from <strong>8.33% to 49.66%</strong>.</li>
+        <li><strong>43.3&nbsp;KB/s</strong> encryption throughput on an Arduino Uno, ahead of PRESENT and LEA.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="entry grid" id="ai-projects">
+    <div class="rail">
+      <p class="when">AUG &mdash; NOV 2025</p>
+      <p class="where">IIT Delhi<br />Prof. Mausam</p>
+      <p class="stack">C++ · Python</p>
+    </div>
+    <div class="col">
+      <h3>Search and adversarial planning</h3>
+      <p class="role">Two artificial-intelligence projects</p>
+      <ul class="points">
+        <li><strong>Stones &amp; Rivers game agent</strong> &mdash; minimax search over a two-player strategy game, with board evaluation heuristics capturing positional and tactical features and learned weights guiding the tree search.</li>
+        <li><strong>Flood relief supply planner</strong> &mdash; relief delivery modelled as constrained optimisation, scheduling multi-trip helicopter routes to maximise supply delivered to remote villages within time and weight bounds.</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- ============ 04 education ============ -->
+<section class="sec wrap" id="education">
+  <div class="grid sec-head">
+    <h2><span class="num">04</span>Education</h2>
+    <div class="hr"></div>
+  </div>
+  <div class="grid">
+    <div class="rows">
+      <div class="row">
+        <p class="t"><b>IIT Delhi</b> <span>&mdash; M.Tech, Computer Science &amp; Engineering</span></p>
+        <p class="d">2025 &mdash; 2027</p>
+        <p class="sub">CGPA 9.25 &middot; department rank 1</p>
+      </div>
+      <div class="row">
+        <p class="t"><b>Government Engineering College, Patan</b> <span>&mdash; B.E., Computer Science &amp; Engineering</span></p>
+        <p class="d">2021 &mdash; 2025</p>
+        <p class="sub">CGPA 9.10</p>
+      </div>
+      <div class="row">
+        <p class="t"><b>Jawahar Navodaya Vidyalaya, Rajkot</b> <span>&mdash; CBSE</span></p>
+        <p class="d">2019, 2021</p>
+        <p class="sub">91.8% in class XII &middot; 87.6% in class X</p>
+      </div>
+      <div class="row">
+        <p class="t"><span>Graduate coursework &mdash;</span> <span>Cornerstone Project, Introduction to Data Management, Network &amp; System Security, Parallel &amp; Distributed Computing, Information Visualization, Architecture of High Performance Computers, Systems Concepts, Mathematical Foundations of Computing</span></p>
+        <p class="d">IIT DELHI</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 recognition ============ -->
+<section class="sec wrap" id="recognition">
+  <div class="grid sec-head">
+    <h2><span class="num">05</span>Recognition</h2>
+    <div class="hr"></div>
+  </div>
+  <div class="grid">
+    <div class="rows">
+      <div class="row">
+        <p class="t">Department rank 1, M.Tech Computer Science &amp; Engineering</p>
+        <p class="d">IIT DELHI</p>
+      </div>
+      <div class="row">
+        <p class="t">Teaching assistant across three core courses &mdash; DSA, ADA and Theory of Computation</p>
+        <p class="d">IIT DELHI</p>
+      </div>
+      <!-- TODO: GATE rank, scholarships, hackathons, B.E.-era awards — add rows here -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 technical ============ -->
+<section class="sec wrap" id="technical">
+  <div class="grid sec-head">
+    <h2><span class="num">06</span>Technical</h2>
+    <div class="hr"></div>
+  </div>
+  <div class="grid">
+    <dl class="skills">
+      <div class="skill"><dt>Languages</dt><dd>C, C++, Python, SQL</dd></div>
+      <div class="skill"><dt>Parallel &amp; HPC</dt><dd>CUDA, OpenMP, MPI, AVX-512 / SIMD, multithreading</dd></div>
+      <div class="skill"><dt>Systems</dt><dd>Linux, Flex, Bison, ptrace, GDB, Git, Docker</dd></div>
+      <div class="skill"><dt>Data &amp; ML</dt><dd>NumPy, Pandas, scikit-learn, Plotly, MongoDB</dd></div>
+      <div class="skill"><dt>Web</dt><dd>FastAPI, React</dd></div>
+      <div class="skill"><dt>Foundations</dt><dd>Data structures &amp; algorithms, operating systems, databases, computer architecture, theory of computation</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ 07 contact ============ -->
+<section class="sec wrap" id="contact">
+  <div class="grid sec-head">
+    <h2><span class="num">07</span>Contact</h2>
+    <div class="hr"></div>
+  </div>
+  <div class="grid">
+    <div class="contact-body">
+      <p>
+        I am open to research collaborations and to systems, high-performance computing and
+        machine learning internships. Email reaches me fastest.
       </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-      <div class="hero-socials">
-        <a href="https://github.com/[yourusername]" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-        <a href="https://linkedin.com/in/[yourusername]" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="mailto:[youremail@example.com]" aria-label="Email">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── ABOUT (anchor target) ─── -->
-  <div id="about"></div>
-
-  <!-- ─── PROJECTS ─── -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <p class="section-subtitle">A selection of things I've built</p>
-
-      <div class="projects-grid">
-
-        <!-- Project Card 1 -->
-        <article class="project-card">
-          <div class="card-header">
-            <h3 class="card-title">[Project Name 1]</h3>
-            <div class="card-links">
-              <a href="https://github.com/[yourusername]/[repo]" target="_blank" rel="noopener" title="GitHub">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-              <a href="#" target="_blank" rel="noopener" title="Live Demo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <p class="card-desc">[Brief description of what this project does, the problem it solves, and any notable results or metrics.]</p>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">TensorFlow</span>
-            <span class="tag">Pandas</span>
-          </div>
-        </article>
-
-        <!-- Project Card 2 -->
-        <article class="project-card">
-          <div class="card-header">
-            <h3 class="card-title">[Project Name 2]</h3>
-            <div class="card-links">
-              <a href="https://github.com/[yourusername]/[repo]" target="_blank" rel="noopener" title="GitHub">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-              <a href="#" target="_blank" rel="noopener" title="Live Demo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <p class="card-desc">[Brief description of what this project does, the problem it solves, and any notable results or metrics.]</p>
-          <div class="card-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-          </div>
-        </article>
-
-        <!-- Project Card 3 -->
-        <article class="project-card">
-          <div class="card-header">
-            <h3 class="card-title">[Project Name 3]</h3>
-            <div class="card-links">
-              <a href="https://github.com/[yourusername]/[repo]" target="_blank" rel="noopener" title="GitHub">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-              <a href="#" target="_blank" rel="noopener" title="Live Demo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <p class="card-desc">[Brief description of what this project does, the problem it solves, and any notable results or metrics.]</p>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Flask</span>
-            <span class="tag">PostgreSQL</span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── SKILLS ─── -->
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <p class="section-subtitle">Technologies I work with</p>
-
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3 class="skill-group-title">Languages</h3>
-          <div class="tags">
-            <span class="tag">[Language 1]</span>
-            <span class="tag">[Language 2]</span>
-            <span class="tag">[Language 3]</span>
-            <span class="tag">[Language 4]</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Frameworks &amp; Libraries</h3>
-          <div class="tags">
-            <span class="tag">[Framework 1]</span>
-            <span class="tag">[Framework 2]</span>
-            <span class="tag">[Framework 3]</span>
-            <span class="tag">[Framework 4]</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Tools &amp; Platforms</h3>
-          <div class="tags">
-            <span class="tag">[Tool 1]</span>
-            <span class="tag">[Tool 2]</span>
-            <span class="tag">[Tool 3]</span>
-            <span class="tag">[Tool 4]</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CONTACT ─── -->
-  <section id="contact" class="section">
-    <div class="container contact-container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-subtitle">Feel free to reach out — I'm open to opportunities and collaborations.</p>
-
       <div class="contact-links">
-        <a href="mailto:[youremail@example.com]" class="contact-item">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          [youremail@example.com]
-        </a>
-        <a href="https://github.com/[yourusername]" target="_blank" rel="noopener" class="contact-item">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          github.com/[yourusername]
-        </a>
-        <a href="https://linkedin.com/in/[yourusername]" target="_blank" rel="noopener" class="contact-item">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          linkedin.com/in/[yourusername]
-        </a>
+        <a href="mailto:nayanrabadiya333@gmail.com">nayanrabadiya333@gmail.com</a>
+        <!-- TODO: add your IIT Delhi address here, e.g. mcs252108@iitd.ac.in -->
+        <span class="cl-sep" aria-hidden="true"></span>
+        <a href="https://github.com/NayanRabadiya">GitHub</a>
+        <!-- TODO: replace with your real LinkedIn URL -->
+        <a href="https://www.linkedin.com/in/">LinkedIn</a>
+        <a href="assets/Nayan_Rabadiya_CV.pdf">CV (PDF)</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ─── FOOTER ─── -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>&copy; 2026 [Your Name]</span>
-      <nav class="footer-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <div class="epigraph" id="epigraph">
+    <blockquote id="q-text">Simplicity is a prerequisite for reliability.</blockquote>
+    <p class="attr">
+      <span class="attr-name" id="q-who">Edsger W. Dijkstra</span>
+      <button class="q-next" id="q-next" type="button" aria-label="Show another quote" title="Another">&#8635;</button>
+    </p>
+  </div>
+
+  <footer class="colophon">
+    <span>&copy; 2026 Nayan Rabadiya</span>
+    <span>Set in Source Serif 4 and IBM Plex Mono</span>
   </footer>
+</section>
 
-  <script src="script.js"></script>
+<script>
+(function () {
+  var Q = [
+    ["Simplicity is a prerequisite for reliability.", "Edsger W. Dijkstra"],
+    ["The purpose of computing is insight, not numbers.", "Richard Hamming"],
+    ["Measure. Don't tune for speed until you've measured.", "Rob Pike"],
+    ["All models are wrong, but some are useful.", "George Box"],
+    ["The first principle is that you must not fool yourself — and you are the easiest person to fool.", "Richard Feynman"],
+    ["Programs must be written for people to read, and only incidentally for machines to execute.", "Abelson and Sussman"],
+    ["Nothing in life is to be feared, it is only to be understood.", "Marie Curie"]
+  ];
+
+  var box  = document.getElementById('epigraph');
+  var text = document.getElementById('q-text');
+  var who  = document.getElementById('q-who');
+  var btn  = document.getElementById('q-next');
+  if (!box || !text || !who || !btn) return;
+
+  // one quote per day, so it never flickers on reload
+  var i = Math.floor(Date.now() / 86400000) % Q.length;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function paint() {
+    text.textContent = Q[i][0];
+    who.textContent  = Q[i][1];
+  }
+  paint();
+
+  btn.addEventListener('click', function () {
+    i = (i + 1) % Q.length;
+    if (reduce) { paint(); return; }
+    box.classList.add('swap');
+    setTimeout(function () { paint(); box.classList.remove('swap'); }, 220);
+  });
+})();
+</script>
+
 </body>
 </html>
