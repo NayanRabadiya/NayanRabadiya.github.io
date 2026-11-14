@@ -2,19 +2,13 @@
 
 Checklist for publishing and finishing the site. Tick items off as you go.
 
-## Publish (do these now, in order)
+## Publish (done 14 Nov 2026)
 
-- [ ] Push the two commits:
-      `git push origin main`
-- [ ] On GitHub open the repo, then **Settings -> Pages -> Build and deployment
-      -> Source** and choose **GitHub Actions**.
-- [ ] Open the **Actions** tab and wait for "Build and deploy" to go green
-      (first run takes 2-3 minutes because it installs Chromium).
-- [ ] Open https://nayanrabadiya.github.io and check:
-      - [ ] portrait shows in the masthead
-      - [ ] the three project pills scroll to their groups
-      - [ ] both CV links download a one-page PDF
-      - [ ] LinkedIn link opens your profile
+- [x] Pushed to `main`.
+- [x] Repo made public (GitHub Pages on the free plan needs a public repo).
+- [x] Pages source set to GitHub Actions; "Build and deploy" workflow green.
+- [x] https://nayanrabadiya.github.io serves the page, both CVs, the portrait
+      and the stylesheet (all checked with HTTP 200).
 - [ ] Open the site on your phone and scroll through the Projects section.
 
 ## Content you can fill in (edit the JSON, commit, push)
