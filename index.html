@@ -29,38 +29,29 @@
   <div class="masthead-top">
     <div>
       <h1>Nayan Rabadiya</h1>
-      <p class="descriptor">Systems<span class="sep">&middot;</span>High-Performance Computing<span class="sep">&middot;</span>Applied ML</p>
+      <p class="descriptor">Applied ML<span class="sep">&middot;</span>Systems<span class="sep">&middot;</span>High-Performance Computing</p>
       <p class="affil">M.TECH COMPUTER SCIENCE &amp; ENGINEERING &middot; IIT DELHI &middot; NEW DELHI</p>
     </div>
-    <!-- TODO: drop a square photo at assets/portrait.jpg, then uncomment this block.
     <figure class="portrait">
       <img src="assets/portrait.jpg" width="440" height="440" alt="Nayan Rabadiya" />
     </figure>
-    -->
   </div>
 
   <p class="lede">
-    I build things close to the machine and measure them honestly &mdash; query engines under a
-    hard memory budget, vectorised and GPU kernels, language runtimes, and machine learning on
-    physiological signals that has to survive real-world noise.
+    I build things close to the machine and measure them honestly &mdash; query engines under a hard memory budget, vectorised and GPU kernels, language runtimes, and machine learning on physiological signals that has to survive real-world noise.
   </p>
 
   <div class="intro">
     <p>
-      My M.Tech thesis at IIT Delhi detects atrial fibrillation from photoplethysmography (PPG)
-      recorded by smartwatches and armbands, aiming at a low false-alarm rate so continuous
-      rhythm monitoring stays usable outside the clinic. Alongside it I work on systems
-      performance &mdash; SIMD and CUDA acceleration, MPI-distributed search, out-of-core query
-      execution &mdash; and I am currently ranked first in the department.
+      My M.Tech thesis at IIT Delhi detects atrial fibrillation from photoplethysmography (PPG) recorded by smartwatches and armbands, aiming at a low false-alarm rate so continuous rhythm monitoring stays usable outside the clinic. Alongside it I work on systems performance &mdash; SIMD and CUDA acceleration, MPI-distributed search, out-of-core query execution &mdash; and I am currently ranked first in the department.
     </p>
   </div>
 
   <div class="currently">
     <p class="k">Currently</p>
     <p>
-      Training and evaluating PPG-only AF classifiers on beat-level labels transferred from
-      synchronised ECG, across the AIIMS and VitalDB cohorts.
-      <span class="when">October 2026</span>
+      Training and evaluating PPG-only AF classifiers on beat-level labels transferred from synchronised ECG, across the AIIMS and VitalDB cohorts.
+      <span class="when">November 2026</span>
     </p>
   </div>
 
@@ -71,7 +62,8 @@
     <a href="#education">Education</a>
     <a href="#technical">Technical</a>
     <a href="#contact">Contact</a>
-    <a href="assets/Nayan_Rabadiya_CV.pdf">CV (PDF)</a>
+    <a class="cv" href="assets/Nayan_Rabadiya_CV_AI_ML.pdf">CV &middot; AI/ML</a>
+    <a class="cv" href="assets/Nayan_Rabadiya_CV_SDE.pdf">CV &middot; SDE</a>
   </nav>
 </header>
 
@@ -85,7 +77,8 @@
       <a href="#projects">Projects</a>
       <a href="#technical">Technical</a>
       <a href="#contact">Contact</a>
-      <a class="cv" href="assets/Nayan_Rabadiya_CV.pdf">CV &darr;</a>
+      <a class="cv" href="assets/Nayan_Rabadiya_CV_AI_ML.pdf">CV AI/ML &darr;</a>
+      <a class="cv" href="assets/Nayan_Rabadiya_CV_SDE.pdf">CV SDE &darr;</a>
     </nav>
   </div>
 </div>
@@ -101,29 +94,19 @@
     <article class="entry grid">
       <div class="rail">
         <p class="when">2026 &mdash; PRESENT</p>
-        <p class="where">M.Tech thesis<br />IIT Delhi</p>
-        <p class="sup">Supervised by<br />Prof. Rahul Garg</p>
-        <p class="stack">Python · NumPy<br />SciPy · scikit-learn<br />Pandas · Plotly</p>
+        <p class="where">M.Tech thesis<br /><span class="brsep"> &middot; </span>IIT Delhi</p>
+        <p class="sup">Supervised by<br /><span class="brsep"> &middot; </span>Prof. Rahul Garg</p>
+        <p class="stack">Python &middot; NumPy<br /><span class="brsep"> &middot; </span>SciPy &middot; scikit-learn<br /><span class="brsep"> &middot; </span>Pandas &middot; Plotly</p>
       </div>
       <div class="col">
         <h3>Atrial fibrillation detection from PPG</h3>
         <p class="role">Wearable-compatible cardiac screening without ECG dependency</p>
         <div class="body">
           <p>
-            Atrial fibrillation is the most common sustained arrhythmia and is frequently
-            asymptomatic, so it is often found only after a stroke. Smartwatches and armbands
-            already record photoplethysmography continuously &mdash; the open question is whether
-            that signal alone supports reliable rhythm classification once motion artefact,
-            poor perfusion and sensor contact loss are allowed in.
+            Atrial fibrillation is the most common sustained arrhythmia and is frequently asymptomatic, so it is often found only after a stroke. Smartwatches and armbands already record photoplethysmography continuously &mdash; the open question is whether that signal alone supports reliable rhythm classification once motion artefact, poor perfusion and sensor contact loss are allowed in.
           </p>
           <p>
-            The work builds machine learning models for AF detection on PPG, trained against
-            beat-level labels transferred from simultaneously recorded ECG. Getting that transfer
-            right required a synchronisation stage of its own: a sync-point clock-correction
-            algorithm that removes device offset and gradual drift, and an offset scan with
-            beat-by-beat pulse pairing that recovers the optimal temporal shift. The target is a
-            low false-positive rate, since alarm fatigue is what makes continuous monitoring fail
-            in practice.
+            The work builds machine learning models for AF detection on PPG, trained against beat-level labels transferred from simultaneously recorded ECG. Getting that transfer right required a synchronisation stage of its own: a sync-point clock-correction algorithm that removes device offset and gradual drift, and an offset scan with beat-by-beat pulse pairing that recovers the optimal temporal shift. The target is a low false-positive rate, since alarm fatigue is what makes continuous monitoring fail in practice.
           </p>
           <div class="spec">
             <div><p class="n">2</p><p class="l">cohorts &mdash; AIIMS<br />and VitalDB</p></div>
@@ -143,13 +126,12 @@
     <div class="hr"></div>
   </div>
 
+
   <article class="entry grid">
     <div class="rail">
       <p class="when">JAN &mdash; APR 2025</p>
       <p class="where">Ahmedabad</p>
-      <p class="stack">FastAPI · MongoDB<br />React · Python</p>
-      <!-- TODO: public repo link, if you want one:
-      <a class="src" href="https://github.com/NayanRabadiya/...">Source &#8599;</a> -->
+      <p class="stack">FastAPI &middot; MongoDB<br /><span class="brsep"> &middot; </span>React &middot; Python</p>
     </div>
     <div class="col">
       <h3>Grownited Pvt. Ltd.</h3>
@@ -161,6 +143,7 @@
       </ul>
     </div>
   </article>
+
 
   <article class="entry grid">
     <div class="rail">
@@ -177,6 +160,7 @@
       </ul>
     </div>
   </article>
+
 </section>
 
 <!-- ============ 03 projects ============ -->
@@ -186,12 +170,87 @@
     <div class="hr"></div>
   </div>
 
+  <nav class="grid proj-nav" aria-label="Project groups">
+    <ul>
+      <li><a href="#ml-ai"><span>Machine learning &amp; AI</span><em>3</em></a></li>
+      <li><a href="#systems"><span>Systems &amp; performance</span><em>5</em></a></li>
+      <li><a href="#security-apps"><span>Security &amp; applications</span><em>2</em></a></li>
+    </ul>
+  </nav>
+
+  <div class="group" id="ml-ai">
+    <div class="grid group-head">
+      <h3 class="gh"><span class="gn">A</span>Machine learning &amp; AI</h3>
+      <p class="gd">Learning systems built and measured end to end &mdash; from NumPy-only models to an offline speech pipeline.</p>
+    </div>
+
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">AUG &mdash; NOV 2026</p>
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>COL774 Machine Learning</p>
+      <p class="stack">Python &middot; NumPy<br /><span class="brsep"> &middot; </span>SciPy</p>
+    </div>
+    <div class="col">
+      <h3>Machine learning from first principles</h3>
+      <p class="role">Four learners written in NumPy only, each tuned and reported against a hidden test set</p>
+      <ul class="points">
+        <li><strong>ECG rhythm classifier</strong> &mdash; softmax logistic regression over hand-designed features from raw single-lead ECG (PhysioNet/CinC 2017 task: normal, AF, other), comparing four gradient-descent variants and class-weighting against focal loss for the imbalance.</li>
+        <li><strong>Neural networks for Indic language identification</strong> &mdash; fully connected networks trained from scratch on audio features for Hindi-vs-Bengali and a 10-language task, with a study of activation, loss (cross-entropy vs MSE), learning-rate schedule and optimiser (SGD, RMSprop, Adam).</li>
+        <li><strong>Prompt-safety text classifier</strong> &mdash; Bernoulli and multinomial Naive Bayes over 927,760 prompts, with stopword-threshold and n-gram-selection sweeps that lifted validation accuracy past the required margin.</li>
+        <li><strong>Maximum-margin sparse networks</strong> &mdash; neural network with an SVM output layer, then sparsified (in progress).</li>
+      </ul>
+    </div>
+  </article>
+
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">2026</p>
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>Prof. Kolin Paul</p>
+      <p class="stack">Python &middot; Vosk<br /><span class="brsep"> &middot; </span>AI4Bharat &middot; MMS-TTS</p>
+    </div>
+    <div class="col">
+      <h3>Offline Hindi&ndash;Gujarati speech translation</h3>
+      <ul class="points">
+        <li>Fully offline speech-to-speech pipeline: Vosk for ASR, AI4Bharat for translation and Meta MMS-TTS for synthesis, stitched together multi-threaded.</li>
+        <li>End-to-end latency around <strong>800&nbsp;ms on CPU</strong> and <strong>450&nbsp;ms on GPU</strong> for medium-length sentences.</li>
+        <li>About <strong>97%</strong> accuracy on the tested sentence set.</li>
+      </ul>
+    </div>
+  </article>
+
+
+  <article class="entry grid">
+    <div class="rail">
+      <p class="when">AUG &mdash; NOV 2025</p>
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>Prof. Mausam</p>
+      <p class="stack">C++ &middot; Python</p>
+    </div>
+    <div class="col">
+      <h3>Search and adversarial planning</h3>
+      <p class="role">Two AI course projects &mdash; game playing and constrained scheduling</p>
+      <ul class="points">
+        <li><strong>Stones &amp; Rivers game agent</strong> &mdash; minimax search over a two-player strategy game, with board evaluation heuristics capturing positional and tactical features and learned weights guiding the tree search.</li>
+        <li><strong>Flood relief supply planner</strong> &mdash; relief delivery modelled as constrained optimisation, scheduling multi-trip helicopter routes to maximise supply delivered to remote villages within time and weight bounds.</li>
+      </ul>
+    </div>
+  </article>
+
+  </div>
+
+  <div class="group" id="systems">
+    <div class="grid group-head">
+      <h3 class="gh"><span class="gn">B</span>Systems &amp; performance</h3>
+      <p class="gd">Code close to the machine, each with a measured baseline: a query engine, a language runtime, SIMD, CUDA and MPI.</p>
+    </div>
+
+
   <article class="entry grid">
     <div class="rail">
       <p class="when">JAN &mdash; APR 2026</p>
-      <p class="where">IIT Delhi<br />Prof. Kaustubh Beedkar</p>
-      <p class="stack">C++ · TPC-H</p>
-      <!-- TODO: repo link -->
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>Prof. Kaustubh Beedkar</p>
+      <p class="stack">C++ &middot; TPC-H</p>
     </div>
     <div class="col">
       <h3>Memory-bounded TPC-H query engine</h3>
@@ -203,12 +262,12 @@
     </div>
   </article>
 
+
   <article class="entry grid">
     <div class="rail">
       <p class="when">2025 &mdash; 2026</p>
-      <p class="where">IIT Delhi<br />Prof. Kolin Paul</p>
-      <p class="stack">C · C++ · Flex<br />Bison · ptrace · Linux</p>
-      <!-- TODO: repo link -->
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>Prof. Kolin Paul</p>
+      <p class="stack">C &middot; C++ &middot; Flex<br /><span class="brsep"> &middot; </span>Bison &middot; ptrace &middot; Linux</p>
     </div>
     <div class="col">
       <h3>Custom language runtime</h3>
@@ -222,12 +281,12 @@
     </div>
   </article>
 
+
   <article class="entry grid">
     <div class="rail">
       <p class="when">AUG &mdash; NOV 2025</p>
-      <p class="where">IIT Delhi<br />Prof. Kolin Paul</p>
-      <p class="stack">C · AVX-512<br />OpenMP</p>
-      <!-- TODO: repo link -->
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>Prof. Kolin Paul</p>
+      <p class="stack">C &middot; AVX-512<br /><span class="brsep"> &middot; </span>OpenMP</p>
     </div>
     <div class="col">
       <h3>GEMM and Smith&ndash;Waterman acceleration</h3>
@@ -239,12 +298,12 @@
     </div>
   </article>
 
+
   <article class="entry grid">
     <div class="rail">
       <p class="when">JAN &mdash; APR 2026</p>
-      <p class="where">IIT Delhi<br />Prof. Subodh Sharma</p>
-      <p class="stack">CUDA · C++</p>
-      <!-- TODO: repo link -->
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>Prof. Subodh Sharma</p>
+      <p class="stack">CUDA &middot; C++</p>
     </div>
     <div class="col">
       <h3>GPU local histogram equalisation</h3>
@@ -255,12 +314,12 @@
     </div>
   </article>
 
+
   <article class="entry grid">
     <div class="rail">
       <p class="when">JAN &mdash; APR 2026</p>
-      <p class="where">IIT Delhi<br />Prof. Subodh Sharma</p>
-      <p class="stack">MPI · C++</p>
-      <!-- TODO: repo link -->
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>Prof. Subodh Sharma</p>
+      <p class="stack">MPI &middot; C++</p>
     </div>
     <div class="col">
       <h3>Distributed budgeted maximum-weight clique</h3>
@@ -272,29 +331,20 @@
     </div>
   </article>
 
-  <article class="entry grid">
-    <div class="rail">
-      <p class="when">2026</p>
-      <p class="where">IIT Delhi<br />Prof. Kolin Paul</p>
-      <p class="stack">Python · Vosk<br />AI4Bharat · MMS-TTS</p>
-      <!-- TODO: repo link -->
+  </div>
+
+  <div class="group" id="security-apps">
+    <div class="grid group-head">
+      <h3 class="gh"><span class="gn">C</span>Security &amp; applications</h3>
+      <p class="gd">A cipher benchmarked on a microcontroller, and a small web service built on third-party APIs.</p>
     </div>
-    <div class="col">
-      <h3>Offline Hindi&ndash;Gujarati speech translation</h3>
-      <ul class="points">
-        <li>Fully offline speech-to-speech pipeline: Vosk for ASR, AI4Bharat for translation and Meta MMS-TTS for synthesis, stitched together multi-threaded.</li>
-        <li>End-to-end latency around <strong>800&nbsp;ms on CPU</strong> and <strong>450&nbsp;ms on GPU</strong> for medium-length sentences.</li>
-        <li>About <strong>97%</strong> accuracy on the tested sentence set.</li>
-      </ul>
-    </div>
-  </article>
+
 
   <article class="entry grid">
     <div class="rail">
       <p class="when">JAN &mdash; APR 2026</p>
-      <p class="where">IIT Delhi<br />Prof. Huzur Saran</p>
-      <p class="stack">C · Arduino</p>
-      <!-- TODO: repo link -->
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>Prof. Huzur Saran</p>
+      <p class="stack">C &middot; Arduino</p>
     </div>
     <div class="col">
       <h3>DNA-based lightweight cipher for IoT</h3>
@@ -306,21 +356,25 @@
     </div>
   </article>
 
-  <article class="entry grid" id="ai-projects">
+
+  <article class="entry grid">
     <div class="rail">
-      <p class="when">AUG &mdash; NOV 2025</p>
-      <p class="where">IIT Delhi<br />Prof. Mausam</p>
-      <p class="stack">C++ · Python</p>
+      <p class="when">OCT &mdash; NOV 2026</p>
+      <p class="where">IIT Delhi<br /><span class="brsep"> &middot; </span>Database Systems module</p>
+      <p class="stack">Python &middot; Flask<br /><span class="brsep"> &middot; </span>Google Places &amp; Routes</p>
     </div>
     <div class="col">
-      <h3>Search and adversarial planning</h3>
-      <p class="role">Two artificial-intelligence projects</p>
+      <h3>Minutes Away</h3>
+      <p class="role">Nearby places ranked by real travel time, not map distance</p>
       <ul class="points">
-        <li><strong>Stones &amp; Rivers game agent</strong> &mdash; minimax search over a two-player strategy game, with board evaluation heuristics capturing positional and tactical features and learned weights guiding the tree search.</li>
-        <li><strong>Flood relief supply planner</strong> &mdash; relief delivery modelled as constrained optimisation, scheduling multi-trip helicopter routes to maximise supply delivered to remote villages within time and weight bounds.</li>
+        <li>Flask service that calls Google Places (New) for candidates, then Routes v2 concurrently for each candidate, and ranks by minutes rather than metres.</li>
+        <li>Keys stay server-side; a distance-only fallback keeps the page usable when routing fails. Nine place categories and four travel modes.</li>
       </ul>
     </div>
   </article>
+
+  </div>
+
 </section>
 
 <!-- ============ 04 education ============ -->
@@ -330,24 +384,89 @@
     <div class="hr"></div>
   </div>
   <div class="grid">
+      <figure class="timeline">
+        <svg viewBox="0 0 900 252" role="img" aria-labelledby="tlTitle tlDesc">
+          <title id="tlTitle">Education timeline, 2019 to 2027</title>
+          <desc id="tlDesc">Three enrolments in sequence: Jawahar Navodaya Vidyalaya Rajkot, class X in 2019 to class XII in 2021; B.E. at Government Engineering College Patan, 2021 to 2025, CGPA 9.10; M.Tech at IIT Delhi, 2025 to an expected mid-2027, CGPA 9.25 so far. The figures are listed below the chart.</desc>
+
+          <defs>
+            <pattern id="tlHatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <rect width="7" height="7" fill="#2D4A3E" fill-opacity=".14" />
+              <line x1="0" y1="0" x2="0" y2="7" stroke="#2D4A3E" stroke-opacity=".7" stroke-width="2" />
+            </pattern>
+            <clipPath id="tlClip1"><rect x="666.6" y="34" width="191.1" height="20" rx="3" /></clipPath>
+          </defs>
+
+          <!-- IIT Delhi -->
+          <g class="tl-lane">
+            <text class="tl-label" x="857.7" y="26" text-anchor="end">IIT Delhi<tspan class="deg"> &#8212; M.Tech, Computer Science &amp; Engineering</tspan></text>
+            <g clip-path="url(#tlClip1)">
+              <rect x="666.6" y="34" width="121.2" height="20" class="tl-bar" />
+              <rect x="787.8" y="34" width="69.9" height="20" fill="url(#tlHatch)" />
+            </g>
+            <text class="tl-val" x="678.2" y="47.8">CGPA 9.25</text>
+            <title>IIT Delhi &mdash; M.Tech Computer Science &amp; Engineering, 2025 to expected mid-2027. CGPA 9.25, department rank 1.</title>
+          </g>
+
+          <!-- Government Engineering College, Patan -->
+          <g class="tl-lane">
+            <text class="tl-label" x="284.4" y="96">Government Engineering College, Patan<tspan class="deg"> &#8212; B.E., Computer Science &amp; Engineering</tspan></text>
+            <rect x="284.4" y="104" width="363.1" height="20" rx="3" class="tl-bar" />
+            <text class="tl-val" x="296.0" y="117.8">CGPA 9.10</text>
+            <title>Government Engineering College, Patan &mdash; B.E. Computer Science &amp; Engineering, 2021 to 2025. CGPA 9.10.</title>
+          </g>
+
+          <!-- Jawahar Navodaya Vidyalaya, Rajkot -->
+          <g class="tl-lane">
+            <text class="tl-label" x="64.7" y="166">Jawahar Navodaya Vidyalaya, Rajkot<tspan class="deg"> &#8212; CBSE, class X to XII</tspan></text>
+            <rect x="64.7" y="174" width="200.6" height="20" rx="3" class="tl-bar" />
+            <text class="tl-val" x="76.3" y="187.8">XII 91.8% &#183; X 87.6%</text>
+            <title>Jawahar Navodaya Vidyalaya, Rajkot &mdash; CBSE. Class X in 2019 at 87.6 percent, class XII in 2021 at 91.8 percent.</title>
+          </g>
+
+          <!-- today -->
+          <line class="tl-now" x1="787.8" y1="30" x2="787.8" y2="218" />
+
+          <!-- year axis -->
+          <line class="tl-axis" x1="36" y1="218" x2="872" y2="218" />
+          <g class="tl-tick" text-anchor="middle">
+            <line class="tl-axis" x1="36.0" y1="218" x2="36.0" y2="223" />
+            <text x="36.0" y="237">2019</text>
+            <line class="tl-axis" x1="227.1" y1="218" x2="227.1" y2="223" />
+            <text x="227.1" y="237">2021</text>
+            <line class="tl-axis" x1="418.2" y1="218" x2="418.2" y2="223" />
+            <text x="418.2" y="237">2023</text>
+            <line class="tl-axis" x1="609.3" y1="218" x2="609.3" y2="223" />
+            <text x="609.3" y="237">2025</text>
+            <line class="tl-axis" x1="800.4" y1="218" x2="800.4" y2="223" />
+            <text x="800.4" y="237">2027</text>
+          </g>
+        </svg>
+        <figcaption class="tl-key">
+          <span><i class="sw sw-done"></i>Completed</span>
+          <span><i class="sw sw-left"></i>Remaining &#8212; M.Tech expected mid-2027</span>
+          <span><i class="sw sw-now"></i>Today</span>
+        </figcaption>
+      </figure>
+
     <div class="rows">
-      <div class="row">
+      <div class="row edu-detail">
         <p class="t"><b>IIT Delhi</b> <span>&mdash; M.Tech, Computer Science &amp; Engineering</span></p>
         <p class="d">2025 &mdash; 2027</p>
         <p class="sub">CGPA 9.25 &middot; department rank 1</p>
       </div>
-      <div class="row">
+      <div class="row edu-detail">
         <p class="t"><b>Government Engineering College, Patan</b> <span>&mdash; B.E., Computer Science &amp; Engineering</span></p>
         <p class="d">2021 &mdash; 2025</p>
         <p class="sub">CGPA 9.10</p>
       </div>
-      <div class="row">
+      <div class="row edu-detail">
         <p class="t"><b>Jawahar Navodaya Vidyalaya, Rajkot</b> <span>&mdash; CBSE</span></p>
         <p class="d">2019, 2021</p>
         <p class="sub">91.8% in class XII &middot; 87.6% in class X</p>
       </div>
-      <div class="row">
-        <p class="t"><span>Graduate coursework &mdash;</span> <span>Cornerstone Project, Introduction to Data Management, Network &amp; System Security, Parallel &amp; Distributed Computing, Information Visualization, Architecture of High Performance Computers, Systems Concepts, Mathematical Foundations of Computing</span></p>
+      <div class="row row-course">
+        <p class="t"><span>Graduate coursework &mdash;</span> <span>Machine Learning, Special Module on Database Systems, Cornerstone Project, Introduction to Data Management, Network &amp; System Security, Parallel &amp; Distributed Computing, Information Visualization, Architecture of High Performance Computers, Systems Concepts, Mathematical Foundations of Computing</span></p>
         <p class="d">IIT DELHI</p>
       </div>
     </div>
@@ -370,7 +489,6 @@
         <p class="t">Teaching assistant across three core courses &mdash; DSA, ADA and Theory of Computation</p>
         <p class="d">IIT DELHI</p>
       </div>
-      <!-- TODO: GATE rank, scholarships, hackathons, B.E.-era awards — add rows here -->
     </div>
   </div>
 </section>
@@ -386,8 +504,8 @@
       <div class="skill"><dt>Languages</dt><dd>C, C++, Python, SQL</dd></div>
       <div class="skill"><dt>Parallel &amp; HPC</dt><dd>CUDA, OpenMP, MPI, AVX-512 / SIMD, multithreading</dd></div>
       <div class="skill"><dt>Systems</dt><dd>Linux, Flex, Bison, ptrace, GDB, Git, Docker</dd></div>
-      <div class="skill"><dt>Data &amp; ML</dt><dd>NumPy, Pandas, scikit-learn, Plotly, MongoDB</dd></div>
-      <div class="skill"><dt>Web</dt><dd>FastAPI, React</dd></div>
+      <div class="skill"><dt>Data &amp; ML</dt><dd>NumPy, SciPy, Pandas, scikit-learn, PyTorch, Plotly, MongoDB</dd></div>
+      <div class="skill"><dt>Web</dt><dd>FastAPI, Flask, React</dd></div>
       <div class="skill"><dt>Foundations</dt><dd>Data structures &amp; algorithms, operating systems, databases, computer architecture, theory of computation</dd></div>
     </dl>
   </div>
@@ -402,27 +520,17 @@
   <div class="grid">
     <div class="contact-body">
       <p>
-        I am open to research collaborations and to systems, high-performance computing and
-        machine learning internships. Email reaches me fastest.
+        I am open to research collaborations and to machine learning, data science and software engineering roles. Email reaches me fastest. Two CVs below: one for ML and data roles, one for software engineering.
       </p>
       <div class="contact-links">
         <a href="mailto:nayanrabadiya333@gmail.com">nayanrabadiya333@gmail.com</a>
-        <!-- TODO: add your IIT Delhi address here, e.g. mcs252108@iitd.ac.in -->
         <span class="cl-sep" aria-hidden="true"></span>
         <a href="https://github.com/NayanRabadiya">GitHub</a>
-        <!-- TODO: replace with your real LinkedIn URL -->
-        <a href="https://www.linkedin.com/in/">LinkedIn</a>
-        <a href="assets/Nayan_Rabadiya_CV.pdf">CV (PDF)</a>
+        <a href="https://www.linkedin.com/in/nayan-rabadiya">LinkedIn</a>
+        <a href="assets/Nayan_Rabadiya_CV_AI_ML.pdf">CV &middot; AI/ML &amp; Data</a>
+        <a href="assets/Nayan_Rabadiya_CV_SDE.pdf">CV &middot; SDE</a>
       </div>
     </div>
-  </div>
-
-  <div class="epigraph" id="epigraph">
-    <blockquote id="q-text">Simplicity is a prerequisite for reliability.</blockquote>
-    <p class="attr">
-      <span class="attr-name" id="q-who">Edsger W. Dijkstra</span>
-      <button class="q-next" id="q-next" type="button" aria-label="Show another quote" title="Another">&#8635;</button>
-    </p>
   </div>
 
   <footer class="colophon">
@@ -430,43 +538,6 @@
     <span>Set in Newsreader and JetBrains Mono</span>
   </footer>
 </section>
-
-<script>
-(function () {
-  var Q = [
-    ["Simplicity is a prerequisite for reliability.", "Edsger W. Dijkstra"],
-    ["The purpose of computing is insight, not numbers.", "Richard Hamming"],
-    ["Measure. Don't tune for speed until you've measured.", "Rob Pike"],
-    ["All models are wrong, but some are useful.", "George Box"],
-    ["The first principle is that you must not fool yourself — and you are the easiest person to fool.", "Richard Feynman"],
-    ["Programs must be written for people to read, and only incidentally for machines to execute.", "Abelson and Sussman"],
-    ["Nothing in life is to be feared, it is only to be understood.", "Marie Curie"]
-  ];
-
-  var box  = document.getElementById('epigraph');
-  var text = document.getElementById('q-text');
-  var who  = document.getElementById('q-who');
-  var btn  = document.getElementById('q-next');
-  if (!box || !text || !who || !btn) return;
-
-  // one quote per day, so it never flickers on reload
-  var i = Math.floor(Date.now() / 86400000) % Q.length;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function paint() {
-    text.textContent = Q[i][0];
-    who.textContent  = Q[i][1];
-  }
-  paint();
-
-  btn.addEventListener('click', function () {
-    i = (i + 1) % Q.length;
-    if (reduce) { paint(); return; }
-    box.classList.add('swap');
-    setTimeout(function () { paint(); box.classList.remove('swap'); }, 220);
-  });
-})();
-</script>
 
 </body>
 </html>

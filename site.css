@@ -65,6 +65,13 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   column-gap: var(--gut);
 }
 
+/* Body blocks carry no rail content of their own, so they start in the text
+   column rather than auto-placing into the 200px rail. */
+.grid > .timeline,
+.grid > .rows,
+.grid > .skills,
+.grid > .contact-body { grid-column: 2; }
+
 /* ========== masthead ========== */
 .masthead { padding: 5rem 0 0; }
 
@@ -94,11 +101,12 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   color: var(--faint);
 }
 
-.portrait { width: 220px; }
+.portrait { width: 170px; }
 .portrait img {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
+  border-radius: 4px;
   filter: saturate(.9) contrast(1.02);
   transition: filter .4s ease;
 }
@@ -287,6 +295,150 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   color: var(--faint);
 }
 
+
+.brsep { display: none; }
+
+/* ========== project groups ========== */
+section[id], .group[id] { scroll-margin-top: calc(var(--bar) + 1.2rem); }
+
+.proj-nav { margin: -0.6rem 0 1.4rem; }
+.proj-nav ul {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+.proj-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .42rem .85rem .42rem .95rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  border-bottom-width: 1px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: .02em;
+  color: var(--meta);
+  background: var(--bg);
+  transition: border-color .15s ease, color .15s ease, background .15s ease;
+}
+.proj-nav a em {
+  font-style: normal;
+  font-size: 11px;
+  color: var(--accent);
+  background: var(--accent-lo);
+  border-radius: 999px;
+  padding: .05rem .45rem;
+}
+.proj-nav a:hover { color: var(--accent); border-color: var(--accent); background: var(--hover); }
+
+.group + .group { margin-top: 2.6rem; }
+.group-head { align-items: baseline; padding-bottom: .9rem; border-bottom: 1px solid var(--rule); }
+.group-head .gh {
+  font-family: var(--serif);
+  font-size: 19.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.group-head .gn {
+  display: inline-block;
+  min-width: 1.6em;
+  margin-right: .5rem;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  color: var(--accent);
+}
+.group-head .gd { font-size: 16.5px; color: var(--meta); max-width: 42em; }
+.group .entry:first-of-type { border-top: none; }
+
+/* ========== education timeline (SVG lane chart) ========== */
+.timeline { margin: 0 0 2rem; }
+.timeline svg { display: block; width: 100%; height: auto; }
+
+.tl-bar { fill: var(--accent); }
+.tl-label {
+  font-family: var(--serif);
+  font-size: 15.5px;
+  font-weight: 600;
+  fill: var(--ink);
+}
+.tl-label .deg {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 400;
+  fill: var(--meta);
+}
+.tl-val {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .055em;
+  fill: var(--bg);
+}
+.tl-tick {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .07em;
+  fill: var(--faint);
+}
+.tl-axis { stroke: var(--rule); stroke-width: 1; fill: none; }
+.tl-now  { stroke: var(--accent); stroke-width: 1; opacity: .4; }
+.tl-lane { transition: opacity .15s ease; }
+.timeline svg:hover .tl-lane { opacity: .45; }
+.timeline svg:hover .tl-lane:hover { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .tl-lane { transition: none; } }
+
+.tl-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem 1.6rem;
+  margin-top: 1.1rem;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.tl-key span { display: inline-flex; align-items: center; }
+.tl-key .sw {
+  width: 20px;
+  height: 9px;
+  margin-right: .55rem;
+  border-radius: 2px;
+  flex: none;
+}
+.tl-key .sw-done { background: var(--accent); }
+.tl-key .sw-left {
+  background:
+    repeating-linear-gradient(45deg, var(--accent) 0 2px, transparent 2px 5px),
+    var(--accent-lo);
+}
+.tl-key .sw-now {
+  width: 1px;
+  height: 14px;
+  margin-right: .8rem;
+  margin-left: 9px;
+  border-radius: 0;
+  background: var(--accent);
+  opacity: .5;
+}
+
+/* The chart and the detail rows are two views of the same three facts, so only
+   one is ever on screen: the chart where there is room for its labels, the rows
+   below that width and on paper. */
+.edu-detail { display: none; }
+.row-course { border-top: none !important; padding-top: 0 !important; }
+
+@media (max-width: 860px), print {
+  .timeline { display: none; }
+  .edu-detail { display: block; }
+  .row-course { border-top: 1px solid var(--rule-soft) !important; padding-top: 1.15rem !important; }
+}
+
 /* ========== row lists (education, recognition) ========== */
 .rows .row {
   padding: 1.15rem 0;
@@ -340,51 +492,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 }
 .cl-sep { width: 1px; height: 14px; background: var(--rule); }
 
-/* ========== epigraph + colophon ========== */
-.epigraph {
-  margin: 4.5rem 0 0;
-  padding: 2.2rem 0 0;
-  border-top: 1px solid var(--rule);
-  text-align: center;
-  transition: opacity .2s ease;
-}
-.epigraph.swap { opacity: 0; }
-.epigraph blockquote {
-  font-family: var(--serif);
-  font-size: clamp(19px, 2vw, 23px);
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.45;
-  max-width: 30em;
-  margin: 0 auto;
-  color: var(--meta);
-}
-.epigraph .attr {
-  margin-top: .9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .6rem;
-  font-family: var(--mono);
-  font-size: 11.5px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
-.q-next {
-  font: inherit;
-  font-size: 14px;
-  line-height: 1;
-  padding: .25rem .4rem;
-  background: none;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  color: var(--faint);
-  cursor: pointer;
-  transition: color .15s ease, border-color .15s ease;
-}
-.q-next:hover { color: var(--accent); border-color: var(--accent); }
-
+/* ========== colophon ========== */
 .colophon {
   margin-top: 3.5rem;
   padding: 1.2rem 0 2.6rem;
@@ -415,7 +523,11 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   .rail { display: flex; flex-wrap: wrap; gap: 1.1rem; }
   .rail > * + * { margin-top: 0; }
   .rail br { display: none; }
+  .brsep { display: inline; }
   .skill { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
   .tb-nav { display: none; }
   .spec { gap: 1.6rem; }
+  .proj-nav ul { grid-column: 1; }
+  .group-head { row-gap: .4rem; }
+  .portrait { width: 120px; order: -1; }
 }
