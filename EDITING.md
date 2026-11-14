@@ -172,15 +172,21 @@ year is the build year, computed automatically.
 
 ## The CVs
 
+Layout: the common "Jake's Resume" format (centred name, a contact line of
+icons that link to email, LinkedIn, GitHub and the site, small-caps section
+headers, bold title left and date right, serif type). The look lives in the
+`CSS` string in `cv/build_cv.py`; the icons are the `ICONS` dictionary there.
+The link targets come from `contact` in `profile.json`.
+
 File: `content/cv.json`. Shared facts (name, links, education rows) are read
 from `profile.json` and `education.json` so they cannot drift.
 
 | Key | What it is |
 |-----|------------|
-| `intern` | The Experience entry: `org`, `role`, `when`, `stack`, `bullets` |
-| `thesis.title`, `thesis.meta` | Heading and grey meta line of the Research entry |
-| `teaching` | One sentence for the Teaching section |
-| `projects` | A dictionary of reusable project blocks keyed by a short name (`tpch`, `nn`, ...), each with `title`, `stack`, `when`, `bullets` |
+| `intern` | The internship entry: `role`, `org`, `when`, `stack`, `bullets` |
+| `teaching` | The teaching-assistant entry, same shape as `intern`; both appear under Experience |
+| `thesis.title`, `thesis.meta`, `thesis.when` | Heading, italic subline and right-hand date of the Research entry |
+| `projects` | A dictionary of reusable project blocks keyed by a short name (`tpch`, `nn`, ...), each with `title`, `stack` (shown after the title), `when`, `bullets` |
 | `variants` | One object per CV, keyed `AI_ML` and `SDE` |
 
 Each variant:
@@ -193,13 +199,13 @@ Each variant:
 | `skills` | List of `[label, text]` pairs for the skills table |
 | `thesis` | List of bullets for the Research entry (worded for this role) |
 | `projects` | List of keys from the shared `projects` dictionary, in display order |
-| `order` | Section order: any arrangement of `summary`, `education`, `experience`, `thesis`, `projects`, `skills`, `extras` |
+| `order` | Section order: any arrangement of `summary`, `education`, `experience`, `thesis`, `projects`, `skills` |
 
 - **Add a project to a CV**: write it once under `projects` with a new key,
   then put that key into the `projects` list of the variant(s) that should
   show it. Keep four per CV; swap one out rather than adding a fifth. The
-  builder shrinks the type until the CV fits one page, and stops at 9 pt; if
-  it reports 2 pages, cut text.
+  builder shrinks the type until the CV fits one page, and stops at 9.4 pt;
+  if it reports 2 pages, cut text.
 - **Add a third CV** (for example research): copy a variant under a new key,
   give it a new `file`, and add a matching object to `cvs` in `profile.json`
   so the page links to it.

@@ -11,9 +11,18 @@
   },
   "thesis": {
     "title": "Atrial Fibrillation Detection from PPG Signals in Wearable Devices",
-    "meta": "M.Tech thesis &middot; Prof. Rahul Garg &middot; 2026 &ndash; present"
+    "meta": "M.Tech thesis, IIT Delhi &middot; Supervisor: Prof. Rahul Garg",
+    "when": "2026 &ndash; Present"
   },
-  "teaching": "Teaching assistant, IIT Delhi: Data Structures &amp; Algorithms (labs), Analysis &amp; Design of Algorithms (doubt sessions), Theory of Computation (tutorials).",
+  "teaching": {
+    "role": "Teaching Assistant",
+    "org": "Department of Computer Science &amp; Engineering, IIT Delhi",
+    "when": "2025 &ndash; 2026",
+    "stack": "",
+    "bullets": [
+      "Data Structures &amp; Algorithms (lab sessions), Analysis &amp; Design of Algorithms (doubt sessions), Theory of Computation (tutorials)."
+    ]
+  },
   "projects": {
     "ecg": {
       "title": "ECG Rhythm Classifier (PhysioNet/CinC 2017 task)",
@@ -149,8 +158,7 @@
         "thesis",
         "projects",
         "skills",
-        "experience",
-        "extras"
+        "experience"
       ]
     },
     "SDE": {
@@ -194,8 +202,7 @@
         "experience",
         "projects",
         "skills",
-        "thesis",
-        "extras"
+        "thesis"
       ]
     }
   }
