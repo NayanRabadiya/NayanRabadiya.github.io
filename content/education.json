@@ -1,0 +1,62 @@
+{
+  "entries": [
+    {
+      "institution": "IIT Delhi",
+      "degree": "M.Tech, Computer Science &amp; Engineering",
+      "years": "2025 &mdash; 2027",
+      "result": "CGPA 9.25 &middot; department rank 1",
+      "start": 2025.6,
+      "end": 2027.6,
+      "expected": true,
+      "chart_label": "IIT Delhi",
+      "chart_degree": "M.Tech, Computer Science &amp; Engineering",
+      "chart_value": "CGPA 9.25",
+      "chart_title": "IIT Delhi &mdash; M.Tech Computer Science &amp; Engineering, 2025 to expected mid-2027. CGPA 9.25, department rank 1.",
+      "cv_degree": "M.Tech, Computer Science &amp; Engineering",
+      "cv_years": "2025 &ndash; 2027",
+      "cv_result": "CGPA 9.25 &middot; Dept. rank 1",
+      "cv_institution": "Indian Institute of Technology Delhi"
+    },
+    {
+      "institution": "Government Engineering College, Patan",
+      "degree": "B.E., Computer Science &amp; Engineering",
+      "years": "2021 &mdash; 2025",
+      "result": "CGPA 9.10",
+      "start": 2021.6,
+      "end": 2025.4,
+      "expected": false,
+      "chart_label": "Government Engineering College, Patan",
+      "chart_degree": "B.E., Computer Science &amp; Engineering",
+      "chart_value": "CGPA 9.10",
+      "chart_title": "Government Engineering College, Patan &mdash; B.E. Computer Science &amp; Engineering, 2021 to 2025. CGPA 9.10.",
+      "cv_degree": "B.E., Computer Science &amp; Engineering",
+      "cv_years": "2021 &ndash; 2025",
+      "cv_result": "CGPA 9.10"
+    },
+    {
+      "institution": "Jawahar Navodaya Vidyalaya, Rajkot",
+      "degree": "CBSE",
+      "years": "2019, 2021",
+      "result": "91.8% in class XII &middot; 87.6% in class X",
+      "start": 2019.3,
+      "end": 2021.4,
+      "expected": false,
+      "chart_label": "Jawahar Navodaya Vidyalaya, Rajkot",
+      "chart_degree": "CBSE, class X to XII",
+      "chart_value": "XII 91.8% &#183; X 87.6%",
+      "chart_title": "Jawahar Navodaya Vidyalaya, Rajkot &mdash; CBSE. Class X in 2019 at 87.6 percent, class XII in 2021 at 91.8 percent.",
+      "cv_degree": "CBSE, Class XII &middot; Class X",
+      "cv_years": "2021 &middot; 2019",
+      "cv_result": "91.8% &middot; 87.6%"
+    }
+  ],
+  "chart": {
+    "title": "Education timeline, 2019 to 2027",
+    "desc": "Three enrolments in sequence: Jawahar Navodaya Vidyalaya Rajkot, class X in 2019 to class XII in 2021; B.E. at Government Engineering College Patan, 2021 to 2025, CGPA 9.10; M.Tech at IIT Delhi, 2025 to an expected mid-2027, CGPA 9.25 so far. The figures are listed below the chart.",
+    "year_from": 2019,
+    "year_to": 2027,
+    "remaining_label": "Remaining &#8212; M.Tech expected mid-2027"
+  },
+  "coursework": "Machine Learning, Special Module on Database Systems, Cornerstone Project, Introduction to Data Management, Network &amp; System Security, Parallel &amp; Distributed Computing, Information Visualization, Architecture of High Performance Computers, Systems Concepts, Mathematical Foundations of Computing",
+  "coursework_where": "IIT DELHI"
+}

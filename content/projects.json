@@ -1,0 +1,214 @@
+[
+  {
+    "id": "ml-ai",
+    "letter": "A",
+    "title": "Machine learning &amp; AI",
+    "blurb": "Learning systems built and measured end to end &mdash; from NumPy-only models to an offline speech pipeline.",
+    "projects": [
+      {
+        "when": [
+          "AUG &mdash; NOV 2026"
+        ],
+        "where": [
+          "IIT Delhi",
+          "COL774 Machine Learning"
+        ],
+        "stack": [
+          "Python &middot; NumPy",
+          "SciPy"
+        ],
+        "title": "Machine learning from first principles",
+        "role": "Four learners written in NumPy only, each tuned and reported against a hidden test set",
+        "points": [
+          "<strong>ECG rhythm classifier</strong> &mdash; softmax logistic regression over hand-designed features from raw single-lead ECG (PhysioNet/CinC 2017 task: normal, AF, other), comparing four gradient-descent variants and class-weighting against focal loss for the imbalance.",
+          "<strong>Neural networks for Indic language identification</strong> &mdash; fully connected networks trained from scratch on audio features for Hindi-vs-Bengali and a 10-language task, with a study of activation, loss (cross-entropy vs MSE), learning-rate schedule and optimiser (SGD, RMSprop, Adam).",
+          "<strong>Prompt-safety text classifier</strong> &mdash; Bernoulli and multinomial Naive Bayes over 927,760 prompts, with stopword-threshold and n-gram-selection sweeps that lifted validation accuracy past the required margin.",
+          "<strong>Maximum-margin sparse networks</strong> &mdash; neural network with an SVM output layer, then sparsified (in progress)."
+        ]
+      },
+      {
+        "when": [
+          "2026"
+        ],
+        "where": [
+          "IIT Delhi",
+          "Prof. Kolin Paul"
+        ],
+        "stack": [
+          "Python &middot; Vosk",
+          "AI4Bharat &middot; MMS-TTS"
+        ],
+        "title": "Offline Hindi&ndash;Gujarati speech translation",
+        "points": [
+          "Fully offline speech-to-speech pipeline: Vosk for ASR, AI4Bharat for translation and Meta MMS-TTS for synthesis, stitched together multi-threaded.",
+          "End-to-end latency around <strong>800&nbsp;ms on CPU</strong> and <strong>450&nbsp;ms on GPU</strong> for medium-length sentences.",
+          "About <strong>97%</strong> accuracy on the tested sentence set."
+        ]
+      },
+      {
+        "when": [
+          "AUG &mdash; NOV 2025"
+        ],
+        "where": [
+          "IIT Delhi",
+          "Prof. Mausam"
+        ],
+        "stack": [
+          "C++ &middot; Python"
+        ],
+        "title": "Search and adversarial planning",
+        "role": "Two AI course projects &mdash; game playing and constrained scheduling",
+        "points": [
+          "<strong>Stones &amp; Rivers game agent</strong> &mdash; minimax search over a two-player strategy game, with board evaluation heuristics capturing positional and tactical features and learned weights guiding the tree search.",
+          "<strong>Flood relief supply planner</strong> &mdash; relief delivery modelled as constrained optimisation, scheduling multi-trip helicopter routes to maximise supply delivered to remote villages within time and weight bounds."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "systems",
+    "letter": "B",
+    "title": "Systems &amp; performance",
+    "blurb": "Code close to the machine, each with a measured baseline: a query engine, a language runtime, SIMD, CUDA and MPI.",
+    "projects": [
+      {
+        "when": [
+          "JAN &mdash; APR 2026"
+        ],
+        "where": [
+          "IIT Delhi",
+          "Prof. Kaustubh Beedkar"
+        ],
+        "stack": [
+          "C++ &middot; TPC-H"
+        ],
+        "title": "Memory-bounded TPC-H query engine",
+        "points": [
+          "Query execution engine running multi-gigabyte TPC-H workloads under a strict <strong>64&nbsp;MB</strong> memory budget.",
+          "Volcano-model iterator pipeline with external merge sort and an LRU buffer pool.",
+          "Cost-based join selection, with a memory-aware fallback to disk-based joins."
+        ]
+      },
+      {
+        "when": [
+          "2025 &mdash; 2026"
+        ],
+        "where": [
+          "IIT Delhi",
+          "Prof. Kolin Paul"
+        ],
+        "stack": [
+          "C &middot; C++ &middot; Flex",
+          "Bison &middot; ptrace &middot; Linux"
+        ],
+        "title": "Custom language runtime",
+        "role": "Shell, compiler, virtual machine, debugger and garbage collector",
+        "points": [
+          "Mini-shell with command pipelines, background processes and job control.",
+          "<code>ptrace</code>-based debugger with software breakpoints and register inspection.",
+          "Flex/Bison compiler targeting a stack-based virtual machine, with its own assembler and a <strong>garbage collector</strong>.",
+          "All five components integrated behind one shell &mdash; compile, run and debug in a single session."
+        ]
+      },
+      {
+        "when": [
+          "AUG &mdash; NOV 2025"
+        ],
+        "where": [
+          "IIT Delhi",
+          "Prof. Kolin Paul"
+        ],
+        "stack": [
+          "C &middot; AVX-512",
+          "OpenMP"
+        ],
+        "title": "GEMM and Smith&ndash;Waterman acceleration",
+        "points": [
+          "Dense matrix multiplication tuned with AVX-512 vectorisation, cache blocking, loop unrolling and memory alignment &mdash; <strong>44.31 GFLOP/s</strong> and a <strong>2.18&times;</strong> speedup over the NumPy baseline, from 1K&times;1K to 12K&times;12K.",
+          "Smith&ndash;Waterman alignment parallelised by anti-diagonal wavefront with AVX-512 and OpenMP &mdash; <strong>23&times;</strong> over the C baseline.",
+          "Both measured on a 4-core CPU against single-threaded references."
+        ]
+      },
+      {
+        "when": [
+          "JAN &mdash; APR 2026"
+        ],
+        "where": [
+          "IIT Delhi",
+          "Prof. Subodh Sharma"
+        ],
+        "stack": [
+          "CUDA &middot; C++"
+        ],
+        "title": "GPU local histogram equalisation",
+        "points": [
+          "CUDA kernels for local histogram equalisation, with KNN and K-Means neighbourhood search traded off for speed against accuracy.",
+          "On NVIDIA Kepler (sm_35) against a sequential baseline: <strong>16.87&times;</strong> with K-Means, <strong>11.44&times;</strong> with KNN."
+        ]
+      },
+      {
+        "when": [
+          "JAN &mdash; APR 2026"
+        ],
+        "where": [
+          "IIT Delhi",
+          "Prof. Subodh Sharma"
+        ],
+        "stack": [
+          "MPI &middot; C++"
+        ],
+        "title": "Distributed budgeted maximum-weight clique",
+        "points": [
+          "Branch-and-bound solver distributed across MPI ranks, with non-blocking bound sharing to prune redundant branches as they appear.",
+          "Graph colouring for upper-bound pruning and fractional knapsack for budget feasibility.",
+          "<strong>6.87&times;</strong> speedup at 12 processes."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "security-apps",
+    "letter": "C",
+    "title": "Security &amp; applications",
+    "blurb": "A cipher benchmarked on a microcontroller, and a small web service built on third-party APIs.",
+    "projects": [
+      {
+        "when": [
+          "JAN &mdash; APR 2026"
+        ],
+        "where": [
+          "IIT Delhi",
+          "Prof. Huzur Saran"
+        ],
+        "stack": [
+          "C &middot; Arduino"
+        ],
+        "title": "DNA-based lightweight cipher for IoT",
+        "points": [
+          "Implemented and benchmarked a DNA-based lightweight block cipher against established lightweight designs.",
+          "Extended it with a 4-round structure, additive modular substitution and a row-diffusion cascade &mdash; avalanche effect from <strong>1.56% to 35.0%</strong>, key sensitivity from <strong>8.33% to 49.66%</strong>.",
+          "<strong>43.3&nbsp;KB/s</strong> encryption throughput on an Arduino Uno, ahead of PRESENT and LEA."
+        ]
+      },
+      {
+        "when": [
+          "OCT &mdash; NOV 2026"
+        ],
+        "where": [
+          "IIT Delhi",
+          "Database Systems module"
+        ],
+        "stack": [
+          "Python &middot; Flask",
+          "Google Places &amp; Routes"
+        ],
+        "title": "Minutes Away",
+        "role": "Nearby places ranked by real travel time, not map distance",
+        "points": [
+          "Flask service that calls Google Places (New) for candidates, then Routes v2 concurrently for each candidate, and ranks by minutes rather than metres.",
+          "Keys stay server-side; a distance-only fallback keeps the page usable when routing fails. Nine place categories and four travel modes."
+        ]
+      }
+    ]
+  }
+]

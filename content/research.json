@@ -1,0 +1,38 @@
+{
+  "when": [
+    "2026 &mdash; PRESENT"
+  ],
+  "where": [
+    "M.Tech thesis",
+    "IIT Delhi"
+  ],
+  "sup": [
+    "Supervised by",
+    "Prof. Rahul Garg"
+  ],
+  "stack": [
+    "Python &middot; NumPy",
+    "SciPy &middot; scikit-learn",
+    "Pandas &middot; Plotly"
+  ],
+  "title": "Atrial fibrillation detection from PPG",
+  "role": "Wearable-compatible cardiac screening without ECG dependency",
+  "paragraphs": [
+    "Atrial fibrillation is the most common sustained arrhythmia and is frequently asymptomatic, so it is often found only after a stroke. Smartwatches and armbands already record photoplethysmography continuously &mdash; the open question is whether that signal alone supports reliable rhythm classification once motion artefact, poor perfusion and sensor contact loss are allowed in.",
+    "The work builds machine learning models for AF detection on PPG, trained against beat-level labels transferred from simultaneously recorded ECG. Getting that transfer right required a synchronisation stage of its own: a sync-point clock-correction algorithm that removes device offset and gradual drift, and an offset scan with beat-by-beat pulse pairing that recovers the optimal temporal shift. The target is a low false-positive rate, since alarm fatigue is what makes continuous monitoring fail in practice."
+  ],
+  "specs": [
+    {
+      "n": "2",
+      "l": "cohorts &mdash; AIIMS<br />and VitalDB"
+    },
+    {
+      "n": "2",
+      "l": "signal modalities<br />ECG and PPG"
+    },
+    {
+      "n": "ms",
+      "l": "alignment held at<br />beat resolution"
+    }
+  ]
+}

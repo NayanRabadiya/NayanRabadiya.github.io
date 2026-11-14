@@ -1,0 +1,202 @@
+{
+  "intern": {
+    "org": "Grownited Pvt. Ltd., Ahmedabad",
+    "role": "Software Engineering Intern",
+    "when": "Jan &ndash; Apr 2025",
+    "stack": "FastAPI, MongoDB, React",
+    "bullets": [
+      "Built a REST backend in <b>FastAPI</b> over <b>MongoDB</b> serving a <b>React</b> single-page app, with role-based access control for user and admin roles.",
+      "Shipped category-wise tracking, budgets with overspending indicators, analytics dashboards, PDF export and an admin panel."
+    ]
+  },
+  "thesis": {
+    "title": "Atrial Fibrillation Detection from PPG Signals in Wearable Devices",
+    "meta": "M.Tech thesis &middot; Prof. Rahul Garg &middot; 2026 &ndash; present"
+  },
+  "teaching": "Teaching assistant, IIT Delhi: Data Structures &amp; Algorithms (labs), Analysis &amp; Design of Algorithms (doubt sessions), Theory of Computation (tutorials).",
+  "projects": {
+    "ecg": {
+      "title": "ECG Rhythm Classifier (PhysioNet/CinC 2017 task)",
+      "stack": "Python, NumPy, SciPy",
+      "when": "Aug &ndash; Nov 2026",
+      "bullets": [
+        "Built a 3-class (normal / AF / other) <b>softmax logistic regression</b> classifier from scratch over hand-designed features extracted from raw single-lead ECG.",
+        "Compared four gradient-descent variants and static class-weighting against <b>focal loss</b> for class imbalance, with metrics that expose minority-class performance."
+      ]
+    },
+    "nn": {
+      "title": "Neural Networks for Indic Language Identification from Audio",
+      "stack": "Python, NumPy",
+      "when": "Sep 2026",
+      "bullets": [
+        "Implemented fully connected networks with backpropagation in <b>NumPy only</b> for Hindi-vs-Bengali and 10-language classification from audio features.",
+        "Controlled study of activation (sigmoid / tanh / ReLU), loss (cross-entropy vs MSE), learning-rate schedules and optimisers (SGD, RMSprop, <b>Adam</b>)."
+      ]
+    },
+    "nb": {
+      "title": "Prompt-Safety Text Classifier",
+      "stack": "Python, NumPy",
+      "when": "Oct 2026",
+      "bullets": [
+        "Bernoulli and multinomial <b>Naive Bayes</b> over 927,760 prompts; stopword-threshold and n-gram-selection sweeps improved validation accuracy beyond the required margin."
+      ]
+    },
+    "speech": {
+      "title": "Real-Time Offline Hindi-to-Gujarati Speech Translation",
+      "stack": "Python, PyTorch, Vosk, AI4Bharat, MMS-TTS",
+      "when": "2026",
+      "bullets": [
+        "Fully offline speech-to-speech pipeline: <b>Vosk</b> ASR, <b>AI4Bharat</b> translation and Meta <b>MMS-TTS</b> synthesis in a multi-threaded architecture.",
+        "About <b>800 ms</b> end-to-end on CPU and <b>450 ms</b> on GPU for medium-length sentences; about <b>97%</b> translation accuracy on the tested set."
+      ]
+    },
+    "game": {
+      "title": "Adversarial Game Agent &mdash; Stones and Rivers",
+      "stack": "Python",
+      "when": "Aug &ndash; Nov 2025",
+      "bullets": [
+        "Two-player strategy-game agent using <b>minimax search</b> with board-evaluation heuristics capturing positional and tactical features; learned heuristic weights guide the tree search."
+      ]
+    },
+    "flood": {
+      "title": "Flood Relief Supply Planner",
+      "stack": "C++",
+      "when": "Aug &ndash; Nov 2025",
+      "bullets": [
+        "Modelled relief delivery as <b>constrained optimisation</b>; a local-search solver schedules multi-trip helicopter routes that maximise supply delivered within time and weight bounds."
+      ]
+    },
+    "tpch": {
+      "title": "Memory-Bounded TPC-H Query Engine",
+      "stack": "C++",
+      "when": "Jan &ndash; Apr 2026",
+      "bullets": [
+        "Query execution engine running multi-gigabyte TPC-H workloads under a strict <b>64 MB</b> memory budget: <b>Volcano-model</b> iterator pipeline, external merge sort and an <b>LRU buffer pool</b>.",
+        "Cost-based join selection with a memory-aware fallback to disk-based joins."
+      ]
+    },
+    "runtime": {
+      "title": "Custom Language Runtime &mdash; Shell, Compiler, VM, Debugger, GC",
+      "stack": "C, C++, Flex/Bison, ptrace, Linux",
+      "when": "2025 &ndash; 2026",
+      "bullets": [
+        "Mini-shell with pipelines, background processes and job control; <b>ptrace</b>-based debugger with software breakpoints and register inspection.",
+        "Flex/Bison compiler emitting bytecode for a <b>stack-based virtual machine</b> with its own assembler and a <b>mark-and-sweep garbage collector</b>; all five components integrated behind one shell."
+      ]
+    },
+    "gemm": {
+      "title": "GEMM and Smith&ndash;Waterman Acceleration",
+      "stack": "C, AVX-512, OpenMP",
+      "when": "Aug &ndash; Nov 2025",
+      "bullets": [
+        "Dense matrix multiplication with <b>AVX-512</b> vectorisation, three-level cache blocking, loop unrolling and 64-byte alignment: <b>44.31 GFLOP/s</b>, <b>2.18x</b> over the NumPy baseline up to 12K x 12K.",
+        "Smith&ndash;Waterman alignment parallelised by anti-diagonal wavefront with AVX-512 and OpenMP: <b>23x</b> over the sequential C baseline on a 4-core CPU."
+      ]
+    },
+    "cuda": {
+      "title": "GPU-Accelerated Local Histogram Equalisation",
+      "stack": "CUDA, C++",
+      "when": "Jan &ndash; Apr 2026",
+      "bullets": [
+        "CUDA kernels with KNN and K-Means neighbourhood search; <b>16.87x</b> (K-Means) and <b>11.44x</b> (KNN) over a sequential baseline on an NVIDIA Kepler GPU."
+      ]
+    },
+    "mpi": {
+      "title": "Distributed Budgeted Maximum-Weight Clique Solver",
+      "stack": "C++, MPI",
+      "when": "Jan &ndash; Apr 2026",
+      "bullets": [
+        "Branch-and-bound across MPI ranks with <b>non-blocking bound sharing</b>, graph-colouring upper bounds and knapsack-relaxation pruning: <b>6.87x</b> speedup at 12 processes."
+      ]
+    }
+  },
+  "variants": {
+    "AI_ML": {
+      "file": "Nayan_Rabadiya_CV_AI_ML.pdf",
+      "title": "Machine Learning &middot; Data Science",
+      "summary": "M.Tech Computer Science student at IIT Delhi, first in the department. Thesis on machine learning for atrial fibrillation detection from wearable PPG. Implements models from first principles in NumPy, engineers features from raw signals and evaluates honestly. Seeking ML and data science roles.",
+      "skills": [
+        [
+          "Languages",
+          "Python, C++, C, SQL"
+        ],
+        [
+          "ML &amp; data",
+          "NumPy, SciPy, Pandas, scikit-learn, PyTorch, Plotly; regression, neural networks, Naive Bayes and SVMs implemented from scratch"
+        ],
+        [
+          "Signal &amp; evaluation",
+          "ECG/PPG preprocessing, feature engineering, class-imbalance handling, cross-validation, ROC/F1 analysis"
+        ],
+        [
+          "Engineering",
+          "Git, Linux, Docker, FastAPI, MongoDB; CUDA and OpenMP for acceleration"
+        ]
+      ],
+      "thesis": [
+        "Developing ML models that detect atrial fibrillation from <b>PPG alone</b>, so wearables can screen continuously without ECG, targeting a low false-alarm rate under real-world motion and contact noise.",
+        "Built the ECG&ndash;PPG <b>synchronisation</b> stage behind beat-level label transfer: sync-point clock correction for device offset and drift, plus an offset scan with beat-by-beat pulse pairing. Verified on the <b>AIIMS</b> and <b>VitalDB</b> cohorts."
+      ],
+      "projects": [
+        "ecg",
+        "nn",
+        "speech",
+        "game"
+      ],
+      "order": [
+        "summary",
+        "education",
+        "thesis",
+        "projects",
+        "skills",
+        "experience",
+        "extras"
+      ]
+    },
+    "SDE": {
+      "file": "Nayan_Rabadiya_CV_SDE.pdf",
+      "title": "Software Engineering &middot; Systems",
+      "summary": "M.Tech Computer Science student at IIT Delhi, first in the department. Builds software close to the machine and measures it: a memory-bounded query engine, a full language runtime, SIMD and GPU kernels, and a production REST backend. Strong in C++, Python, data structures and concurrency. Seeking software engineering roles.",
+      "skills": [
+        [
+          "Languages",
+          "C++, C, Python, SQL, JavaScript"
+        ],
+        [
+          "Backend &amp; web",
+          "FastAPI, Flask, REST APIs, MongoDB, React"
+        ],
+        [
+          "Systems",
+          "Linux, multithreading, ptrace, GDB, Flex/Bison, Git, Docker"
+        ],
+        [
+          "Parallel &amp; performance",
+          "OpenMP, MPI, CUDA, AVX-512 SIMD, cache-aware optimisation, profiling against baselines"
+        ],
+        [
+          "Foundations",
+          "Data structures &amp; algorithms, operating systems, databases, computer architecture, networks"
+        ]
+      ],
+      "thesis": [
+        "Designed a sync-point clock-correction algorithm and an offset-scan, beat-by-beat pairing algorithm to synchronise ECG and PPG biosignals; verified on the AIIMS and VitalDB datasets. Now building ML models for AF detection from PPG."
+      ],
+      "projects": [
+        "tpch",
+        "runtime",
+        "gemm",
+        "speech"
+      ],
+      "order": [
+        "summary",
+        "education",
+        "experience",
+        "projects",
+        "skills",
+        "thesis",
+        "extras"
+      ]
+    }
+  }
+}

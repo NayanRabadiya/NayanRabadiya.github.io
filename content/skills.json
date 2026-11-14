@@ -1,0 +1,26 @@
+[
+  {
+    "group": "Languages",
+    "list": "C, C++, Python, SQL"
+  },
+  {
+    "group": "Parallel &amp; HPC",
+    "list": "CUDA, OpenMP, MPI, AVX-512 / SIMD, multithreading"
+  },
+  {
+    "group": "Systems",
+    "list": "Linux, Flex, Bison, ptrace, GDB, Git, Docker"
+  },
+  {
+    "group": "Data &amp; ML",
+    "list": "NumPy, SciPy, Pandas, scikit-learn, PyTorch, Plotly, MongoDB"
+  },
+  {
+    "group": "Web",
+    "list": "FastAPI, Flask, React"
+  },
+  {
+    "group": "Foundations",
+    "list": "Data structures &amp; algorithms, operating systems, databases, computer architecture, theory of computation"
+  }
+]

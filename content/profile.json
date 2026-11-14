@@ -1,0 +1,40 @@
+{
+  "name": "Nayan Rabadiya",
+  "descriptor": [
+    "Applied ML",
+    "Systems",
+    "High-Performance Computing"
+  ],
+  "affiliation": "M.TECH COMPUTER SCIENCE &amp; ENGINEERING &middot; IIT DELHI &middot; NEW DELHI",
+  "portrait": "assets/portrait.jpg",
+  "lede": "I build things close to the machine and measure them honestly &mdash; query engines under a hard memory budget, vectorised and GPU kernels, language runtimes, and machine learning on physiological signals that has to survive real-world noise.",
+  "intro": [
+    "My M.Tech thesis at IIT Delhi detects atrial fibrillation from photoplethysmography (PPG) recorded by smartwatches and armbands, aiming at a low false-alarm rate so continuous rhythm monitoring stays usable outside the clinic. Alongside it I work on systems performance &mdash; SIMD and CUDA acceleration, MPI-distributed search, out-of-core query execution &mdash; and I am currently ranked first in the department."
+  ],
+  "currently": {
+    "text": "Training and evaluating PPG-only AF classifiers on beat-level labels transferred from synchronised ECG, across the AIIMS and VitalDB cohorts.",
+    "when": "November 2026"
+  },
+  "meta_description": "Nayan Rabadiya \u2014 M.Tech Computer Science &amp; Engineering, IIT Delhi (department rank 1). Thesis on atrial fibrillation detection from PPG signals in wearable devices. Systems, high-performance computing and applied machine learning.",
+  "og_description": "Systems, HPC and applied ML. M.Tech Computer Science &amp; Engineering, IIT Delhi.",
+  "site_url": "https://nayanrabadiya.github.io/",
+  "contact": {
+    "blurb": "I am open to research collaborations and to machine learning, data science and software engineering roles. Email reaches me fastest. Two CVs below: one for ML and data roles, one for software engineering.",
+    "email": "nayanrabadiya333@gmail.com",
+    "github": "https://github.com/NayanRabadiya",
+    "linkedin": "https://www.linkedin.com/in/nayan-rabadiya"
+  },
+  "cvs": [
+    {
+      "label": "AI/ML",
+      "contact_label": "AI/ML &amp; Data",
+      "file": "assets/Nayan_Rabadiya_CV_AI_ML.pdf"
+    },
+    {
+      "label": "SDE",
+      "contact_label": "SDE",
+      "file": "assets/Nayan_Rabadiya_CV_SDE.pdf"
+    }
+  ],
+  "colophon": "Set in Newsreader and JetBrains Mono"
+}

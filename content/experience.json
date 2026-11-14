@@ -1,0 +1,36 @@
+[
+  {
+    "when": [
+      "JAN &mdash; APR 2025"
+    ],
+    "where": [
+      "Ahmedabad"
+    ],
+    "stack": [
+      "FastAPI &middot; MongoDB",
+      "React &middot; Python"
+    ],
+    "title": "Grownited Pvt. Ltd.",
+    "role": "Software Engineering Intern &mdash; Personal Expense Tracker",
+    "points": [
+      "Built a REST backend in <strong>FastAPI</strong> over MongoDB, serving a React single-page application with role-based access control for user and admin roles.",
+      "Shipped category-wise expense tracking, budgets with overspending indicators, and interactive analytics dashboards.",
+      "Added PDF report export and an admin panel for user management."
+    ]
+  },
+  {
+    "when": [
+      "2025 &mdash; 2026"
+    ],
+    "where": [
+      "IIT Delhi"
+    ],
+    "title": "Teaching assistantship",
+    "role": "Department of Computer Science &amp; Engineering, IIT Delhi",
+    "points": [
+      "<strong>Data Structures &amp; Algorithms</strong> &mdash; lab sessions.",
+      "<strong>Analysis &amp; Design of Algorithms</strong> &mdash; doubt-solving sessions.",
+      "<strong>Theory of Computation</strong> &mdash; tutorial sessions."
+    ]
+  }
+]

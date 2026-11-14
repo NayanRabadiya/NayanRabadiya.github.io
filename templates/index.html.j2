@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ p.name }}</title>
+<meta name="description" content="{{ p.meta_description }}" />
+<link rel="canonical" href="{{ p.site_url }}" />
+
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="{{ p.name }}" />
+<meta property="og:description" content="{{ p.og_description }}" />
+<meta property="og:url" content="{{ p.site_url }}" />
+<meta name="twitter:card" content="summary" />
+
+<meta name="color-scheme" content="light" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FBFBF9'/><text x='16' y='23' font-family='Georgia,serif' font-size='21' font-weight='600' text-anchor='middle' fill='%232D4A3E'>{{ p.name[0] }}</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body>
+{#- ---------- small helpers used by every entry ---------- #}
+{%- macro rail_p(cls, lines) -%}
+{%- if lines %}
+      <p class="{{ cls }}">{{ lines | join('<br /><span class="brsep"> &middot; </span>') }}</p>
+{%- endif -%}
+{%- endmacro %}
+
+{%- macro entry(e, extra_id=None) %}
+  <article class="entry grid"{% if extra_id %} id="{{ extra_id }}"{% endif %}>
+    <div class="rail">
+      {{- rail_p('when', e.when) }}
+      {{- rail_p('where', e.where) }}
+      {{- rail_p('sup', e.sup) }}
+      {{- rail_p('stack', e.stack) }}
+      {%- if e.source %}
+      <a class="src" href="{{ e.source }}">Source &#8599;</a>
+      {%- endif %}
+    </div>
+    <div class="col">
+      <h3>{{ e.title }}</h3>
+      {%- if e.role %}
+      <p class="role">{{ e.role }}</p>
+      {%- endif %}
+      <ul class="points">
+        {%- for pt in e.points %}
+        <li>{{ pt }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </article>
+{%- endmacro %}
+
+<!-- ============ masthead ============ -->
+<header class="masthead wrap" id="top">
+  <div class="masthead-top">
+    <div>
+      <h1>{{ p.name }}</h1>
+      <p class="descriptor">{{ p.descriptor | join('<span class="sep">&middot;</span>') }}</p>
+      <p class="affil">{{ p.affiliation }}</p>
+    </div>
+    {%- if p.portrait %}
+    <figure class="portrait">
+      <img src="{{ p.portrait }}" width="440" height="440" alt="{{ p.name }}" />
+    </figure>
+    {%- endif %}
+  </div>
+
+  <p class="lede">
+    {{ p.lede }}
+  </p>
+
+  <div class="intro">
+    {%- for para in p.intro %}
+    <p>
+      {{ para }}
+    </p>
+    {%- endfor %}
+  </div>
+
+  <div class="currently">
+    <p class="k">Currently</p>
+    <p>
+      {{ p.currently.text }}
+      <span class="when">{{ p.currently.when }}</span>
+    </p>
+  </div>
+
+  <nav class="utility" aria-label="Sections">
+    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#technical">Technical</a>
+    <a href="#contact">Contact</a>
+    {%- for cv in p.cvs %}
+    <a class="cv" href="{{ cv.file }}">CV &middot; {{ cv.label }}</a>
+    {%- endfor %}
+  </nav>
+</header>
+
+<!-- ============ sticky bar ============ -->
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <a class="tb-name" href="#top">{{ p.name }}</a>
+    <nav class="tb-nav" aria-label="Page sections">
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#technical">Technical</a>
+      <a href="#contact">Contact</a>
+      {%- for cv in p.cvs %}
+      <a class="cv" href="{{ cv.file }}">CV {{ cv.label }} &darr;</a>
+      {%- endfor %}
+    </nav>
+  </div>
+</div>
+
+<!-- ============ 01 research ============ -->
+<section class="sec-research" id="research">
+  <div class="wrap">
+    <div class="grid sec-head">
+      <h2><span class="num">01</span>Research</h2>
+      <div class="hr"></div>
+    </div>
+
+    <article class="entry grid">
+      <div class="rail">
+        {{- rail_p('when', r.when) | indent(2) }}
+        {{- rail_p('where', r.where) | indent(2) }}
+        {{- rail_p('sup', r.sup) | indent(2) }}
+        {{- rail_p('stack', r.stack) | indent(2) }}
+      </div>
+      <div class="col">
+        <h3>{{ r.title }}</h3>
+        <p class="role">{{ r.role }}</p>
+        <div class="body">
+          {%- for para in r.paragraphs %}
+          <p>
+            {{ para }}
+          </p>
+          {%- endfor %}
+          <div class="spec">
+            {%- for s in r.specs %}
+            <div><p class="n">{{ s.n }}</p><p class="l">{{ s.l }}</p></div>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 02 experience ============ -->
+<section class="sec wrap" id="experience">
+  <div class="grid sec-head">
+    <h2><span class="num">02</span>Experience</h2>
+    <div class="hr"></div>
+  </div>
+{% for e in experience %}
+{{ entry(e) }}
+{% endfor %}
+</section>
+
+<!-- ============ 03 projects ============ -->
+<section class="sec wrap" id="projects">
+  <div class="grid sec-head">
+    <h2><span class="num">03</span>Projects</h2>
+    <div class="hr"></div>
+  </div>
+
+  <nav class="grid proj-nav" aria-label="Project groups">
+    <ul>
+      {%- for grp in groups %}
+      <li><a href="#{{ grp.id }}"><span>{{ grp.title }}</span><em>{{ grp.projects | length }}</em></a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+{% for grp in groups %}
+  <div class="group" id="{{ grp.id }}">
+    <div class="grid group-head">
+      <h3 class="gh"><span class="gn">{{ grp.letter }}</span>{{ grp.title }}</h3>
+      <p class="gd">{{ grp.blurb }}</p>
+    </div>
+{% for e in grp.projects %}
+{{ entry(e) }}
+{% endfor %}
+  </div>
+{% endfor %}
+</section>
+
+<!-- ============ 04 education ============ -->
+<section class="sec wrap" id="education">
+  <div class="grid sec-head">
+    <h2><span class="num">04</span>Education</h2>
+    <div class="hr"></div>
+  </div>
+  <div class="grid">
+      <figure class="timeline">
+        <svg viewBox="0 0 900 252" role="img" aria-labelledby="tlTitle tlDesc">
+          <title id="tlTitle">{{ edu.chart.title }}</title>
+          <desc id="tlDesc">{{ edu.chart.desc }}</desc>
+
+          <defs>
+            <pattern id="tlHatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <rect width="7" height="7" fill="#2D4A3E" fill-opacity=".14" />
+              <line x1="0" y1="0" x2="0" y2="7" stroke="#2D4A3E" stroke-opacity=".7" stroke-width="2" />
+            </pattern>
+            {%- for lane in chart.lanes if lane.expected %}
+            <clipPath id="tlClip{{ loop.index }}"><rect x="{{ lane.x0 }}" y="{{ lane.bar_y }}" width="{{ lane.w }}" height="20" rx="3" /></clipPath>
+            {%- endfor %}
+          </defs>
+{% for lane in chart.lanes %}
+          <!-- {{ lane.label }} -->
+          <g class="tl-lane">
+            {%- if lane.anchor_end %}
+            <text class="tl-label" x="{{ lane.x1 }}" y="{{ lane.label_y }}" text-anchor="end">{{ lane.label }}<tspan class="deg"> &#8212; {{ lane.degree }}</tspan></text>
+            {%- else %}
+            <text class="tl-label" x="{{ lane.x0 }}" y="{{ lane.label_y }}">{{ lane.label }}<tspan class="deg"> &#8212; {{ lane.degree }}</tspan></text>
+            {%- endif %}
+            {%- if lane.expected %}
+            <g clip-path="url(#tlClip{{ loop.index }})">
+              <rect x="{{ lane.x0 }}" y="{{ lane.bar_y }}" width="{{ lane.done_w }}" height="20" class="tl-bar" />
+              <rect x="{{ lane.x_today }}" y="{{ lane.bar_y }}" width="{{ lane.left_w }}" height="20" fill="url(#tlHatch)" />
+            </g>
+            {%- else %}
+            <rect x="{{ lane.x0 }}" y="{{ lane.bar_y }}" width="{{ lane.w }}" height="20" rx="3" class="tl-bar" />
+            {%- endif %}
+            <text class="tl-val" x="{{ lane.val_x }}" y="{{ lane.val_y }}">{{ lane.value }}</text>
+            <title>{{ lane.title }}</title>
+          </g>
+{% endfor %}
+          <!-- today -->
+          <line class="tl-now" x1="{{ chart.x_today }}" y1="30" x2="{{ chart.x_today }}" y2="218" />
+
+          <!-- year axis -->
+          <line class="tl-axis" x1="36" y1="218" x2="872" y2="218" />
+          <g class="tl-tick" text-anchor="middle">
+            {%- for t in chart.ticks %}
+            <line class="tl-axis" x1="{{ t.x }}" y1="218" x2="{{ t.x }}" y2="223" />
+            <text x="{{ t.x }}" y="237">{{ t.year }}</text>
+            {%- endfor %}
+          </g>
+        </svg>
+        <figcaption class="tl-key">
+          <span><i class="sw sw-done"></i>Completed</span>
+          <span><i class="sw sw-left"></i>{{ edu.chart.remaining_label }}</span>
+          <span><i class="sw sw-now"></i>Today</span>
+        </figcaption>
+      </figure>
+
+    <div class="rows">
+      {%- for e in edu.entries %}
+      <div class="row edu-detail">
+        <p class="t"><b>{{ e.institution }}</b> <span>&mdash; {{ e.degree }}</span></p>
+        <p class="d">{{ e.years }}</p>
+        <p class="sub">{{ e.result }}</p>
+      </div>
+      {%- endfor %}
+      <div class="row row-course">
+        <p class="t"><span>Graduate coursework &mdash;</span> <span>{{ edu.coursework }}</span></p>
+        <p class="d">{{ edu.coursework_where }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 recognition ============ -->
+<section class="sec wrap" id="recognition">
+  <div class="grid sec-head">
+    <h2><span class="num">05</span>Recognition</h2>
+    <div class="hr"></div>
+  </div>
+  <div class="grid">
+    <div class="rows">
+      {%- for rec in recognition %}
+      <div class="row">
+        <p class="t">{{ rec.text }}</p>
+        <p class="d">{{ rec.where }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 technical ============ -->
+<section class="sec wrap" id="technical">
+  <div class="grid sec-head">
+    <h2><span class="num">06</span>Technical</h2>
+    <div class="hr"></div>
+  </div>
+  <div class="grid">
+    <dl class="skills">
+      {%- for s in skills %}
+      <div class="skill"><dt>{{ s.group }}</dt><dd>{{ s.list }}</dd></div>
+      {%- endfor %}
+    </dl>
+  </div>
+</section>
+
+<!-- ============ 07 contact ============ -->
+<section class="sec wrap" id="contact">
+  <div class="grid sec-head">
+    <h2><span class="num">07</span>Contact</h2>
+    <div class="hr"></div>
+  </div>
+  <div class="grid">
+    <div class="contact-body">
+      <p>
+        {{ p.contact.blurb }}
+      </p>
+      <div class="contact-links">
+        <a href="mailto:{{ p.contact.email }}">{{ p.contact.email }}</a>
+        <span class="cl-sep" aria-hidden="true"></span>
+        <a href="{{ p.contact.github }}">GitHub</a>
+        <a href="{{ p.contact.linkedin }}">LinkedIn</a>
+        {%- for cv in p.cvs %}
+        <a href="{{ cv.file }}">CV &middot; {{ cv.contact_label }}</a>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+
+  <footer class="colophon">
+    <span>&copy; {{ year }} {{ p.name }}</span>
+    <span>{{ p.colophon }}</span>
+  </footer>
+</section>
+
+</body>
+</html>
