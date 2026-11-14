@@ -86,7 +86,3 @@ One-time setup on GitHub: **Settings -> Pages -> Source** must be set to
 `index.html` and the PDFs are still committed so the repo works without the
 Action, but the Action always rebuilds them from `content/`, so what you commit
 there is what gets published.
-
-## Open TODOs
-
-See `TODO.md`.
